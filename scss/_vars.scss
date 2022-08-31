@@ -1,0 +1,141 @@
+$default: #191718;
+$span: #FF48F7;
+$hover: #0a0a0a;
+
+%font-main {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+// %placeholder-font {
+//     font-family: "Hind Siliguri", sans-serif;
+//     color: $default;
+// }
+
+// @mixin bgImage($height, $width, $top, $left) {
+//     position: absolute;
+//     content: "";
+//     background-repeat: no-repeat;
+//     height: $height;
+//     width: $width;
+//     top: $top;
+//     left: $left;
+// }
+
+@mixin fonts($fontSize, $fontWeight, $lineHeight) {
+    font-size: $fontSize;
+    font-family: $fontWeight;
+    line-height: $lineHeight;
+}
+
+// @mixin button-arrow($bg,
+//     $borderWidth,
+//     $borderColor,
+//     $width,
+//     $height,
+//     $borderRadius,
+//     $bgColor,
+//     $boxShadowColor) {
+//     background: $bg;
+//     background-repeat: no-repeat;
+//     box-sizing: border-box;
+//     border: $borderWidth solid $borderColor;
+//     width: $width;
+//     height: $height;
+//     border-radius: $borderRadius;
+//     background-color: $bgColor;
+//     background-position: center;
+//     cursor: url(../img/icons/cursor-btn-arrow.png), pointer;
+
+//     &:hover {
+//         transform: scaleY(-1);
+//         box-shadow: 0 3px 10px 0 $boxShadowColor;
+//         transition: all 0.3s ease;
+//     }
+// }
+
+// @mixin button($colorText,
+//     $borderColor,
+//     $width,
+//     $bgColor,
+//     $bgColorHover,
+//     $bgColorDisabled) {
+//     color: $colorText;
+//     box-sizing: border-box;
+//     border: 1px solid $borderColor;
+//     width: $width;
+//     height: 45px;
+//     border-radius: 5px;
+//     background-color: $bgColor;
+//     cursor: url(../img/icons/cursor-btn.png), pointer;
+
+//     &:hover {
+//         background-color: $bgColorHover;
+//         color: $standart-text;
+//         transition: 0.5s;
+//     }
+
+//     &:disabled {
+//         background-color: $bgColorDisabled;
+//         opacity: 0.4;
+//     }
+// }
+
+// @mixin input($bordercolor, $height, $width) {
+//     border: 1px solid $bordercolor;
+//     border-radius: 5px;
+//     outline: none;
+//     height: $height;
+//     width: $width;
+// }
+
+// @mixin figure-for-titles($widthAfter,
+//     $heightAfter,
+//     $background-color,
+//     $topAfter,
+//     $leftAfter,
+//     $zindex,
+//     $widthBefore,
+//     $heightBefore,
+//     $background-color,
+//     $topBefore,
+//     $leftBefore,
+//     $zindex) {
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: $widthAfter;
+//         height: $heightAfter;
+//         background-color: $background-color;
+//         border-bottom: 2px solid $default;
+//         border-left: 2px solid $default;
+//         border-right: 2px solid $default;
+//         top: $topAfter;
+//         left: $leftAfter;
+//         margin-top: -2px;
+//         z-index: $zindex;
+//     }
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: $widthBefore;
+//         height: $heightBefore;
+//         background-color: $background-color;
+//         border-bottom: 2px solid $default;
+//         top: $topBefore;
+//         left: $leftBefore;
+//         z-index: $zindex;
+//     }
+// }
+
+// @mixin hr($left, $marginTop, $width) {
+//     box-sizing: border-box;
+//     color: $horisontal-line;
+//     position: absolute;
+//     left: $left;
+//     margin-top: $marginTop;
+//     width: $width;
+//     height: 1px;
+// }
+

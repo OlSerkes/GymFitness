@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    @extend %font-main;
+    @include fonts(18px, 400, 28px);    
+    color: $default;
+}
+
+h1 {
+    @include fonts(100px, 800, 117px);
+}
+
+h2 {
+    @include fonts(96px, 700, 116px);    
+}
+
+// h3 {
+//     @include fonts(20px, 32px);
+//     font-weight: 500;
+// }
+
+// h4 {
+//     @include fonts(30px, 600, 36px);
+// }
+
+// h5 {
+//     @include fonts(15px, 26px);
+// }
+
+a {
+    color: $default;    
+}
+
+a:hover {
+    color: $hover;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    transition-duration: 0.4s;
+}
+
+// input[type="checkbox"] {
+//     display: none;
+// }
+
+// input[type="checkbox"]:checked+div[class] {
+//     height: auto;
+// }
+
+// input[type="text"],
+// input[type="email"],
+// input[type="password"] {
+//     padding: 10px;
+// }
+
+// input[type="text"]:hover,
+// input[type="email"]:hover,
+// input[type="password"]:hover,
+// textarea:hover {
+//     border: 1px solid $default;
+// }
+
+// input[type="text"]:hover::-webkit-input-placeholder,
+// input[type="email"]:hover::-webkit-input-placeholder,
+// input[type="password"]:hover::-webkit-input-placeholder,
+// textarea:hover::-webkit-input-placeholder {
+//     color: $default;
+// }
+
+// input[type="text"]:focus,
+// input[type="email"]:focus,
+// input[type="password"]:focus,
+// textarea:focus {
+//     border: 1px solid $default;
+//     color: $default;
+// }
+
+// input[type="text"]:invalid,
+// input[type="email"]:invalid,
+// input[type="password"]:invalid {
+//     border: 1px solid $error-color;
+// }
+
+
+
+// [tabindex]:focus {
+//     box-shadow: 0 0 2px 2px #51a7e8;
+//     outline: none;
+// }
+
+// [tabindex]:focus:not(:focus-visible) {
+//     box-shadow: none;
+// }
+
+.container {
+    max-width: 1600px;
+    margin-right: 160px;
+    margin-left: 160px;
+}
+
+.container-fluid {
+    width: 1920px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 1920px;
+}
