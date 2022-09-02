@@ -23,9 +23,9 @@ h2 {
 //     font-weight: 500;
 // }
 
-// h4 {
-//     @include fonts(30px, 600, 36px);
-// }
+h4 {
+    @include fonts(20px, 600, 30px);
+}
 
 // h5 {
 //     @include fonts(15px, 26px);

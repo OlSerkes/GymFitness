@@ -1,5 +1,7 @@
 $default: #191718;
 $span: #FF48F7;
+$colorText: #FFFFFF;
+$bgColorDisabled: #d2c9c9;
 $hover: #0a0a0a;
 
 %font-main {
@@ -24,7 +26,7 @@ $hover: #0a0a0a;
 
 @mixin fonts($fontSize, $fontWeight, $lineHeight) {
     font-size: $fontSize;
-    font-family: $fontWeight;
+    font-weight: $fontWeight;
     line-height: $lineHeight;
 }
 
@@ -54,32 +56,30 @@ $hover: #0a0a0a;
 //     }
 // }
 
-// @mixin button($colorText,
-//     $borderColor,
-//     $width,
-//     $bgColor,
-//     $bgColorHover,
-//     $bgColorDisabled) {
-//     color: $colorText;
-//     box-sizing: border-box;
-//     border: 1px solid $borderColor;
-//     width: $width;
-//     height: 45px;
-//     border-radius: 5px;
-//     background-color: $bgColor;
-//     cursor: url(../img/icons/cursor-btn.png), pointer;
-
-//     &:hover {
-//         background-color: $bgColorHover;
-//         color: $standart-text;
-//         transition: 0.5s;
-//     }
-
-//     &:disabled {
-//         background-color: $bgColorDisabled;
-//         opacity: 0.4;
-//     }
-// }
+@mixin button($colorText,
+    $borderColor,
+    $width,
+    $bgColor,
+    $bgColorHover,
+    $bgColorDisabled) {
+    color: $colorText;
+    box-sizing: border-box;
+    border: 1px solid $borderColor;
+    width: $width;
+    height: 58px;
+    border-radius: 45px;
+    background-color: $bgColor;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $bgColorHover;
+        color: $default;
+        transition: 0.5s;
+    }
+    &:disabled {
+        background-color: $bgColorDisabled;
+        opacity: 0.4;
+    }
+}
 
 // @mixin input($bordercolor, $height, $width) {
 //     border: 1px solid $bordercolor;
