@@ -3,6 +3,7 @@ $span: #FF48F7;
 $colorText: #FFFFFF;
 $bgColorDisabled: #d2c9c9;
 $hover: #0a0a0a;
+$mainSloganColor: #FFE7FD;
 
 %font-main {
     font-family: "Inter", sans-serif;
@@ -56,27 +57,28 @@ $hover: #0a0a0a;
 //     }
 // }
 
-@mixin button($colorText,
+@mixin button($textColor,
     $borderColor,
     $width,
-    $bgColor,
+    $bgColor,    
     $bgColorHover,
-    $bgColorDisabled) {
-    color: $colorText;
+    $textColorHover,
+    $bgDisabled) {
+    color: $textColor;
     box-sizing: border-box;
     border: 1px solid $borderColor;
     width: $width;
     height: 58px;
     border-radius: 45px;
-    background-color: $bgColor;
+    background-color: $bgColor;    
     text-transform: uppercase;
     &:hover {
         background-color: $bgColorHover;
-        color: $default;
+        color: $textColorHover;
         transition: 0.5s;
     }
     &:disabled {
-        background-color: $bgColorDisabled;
+        background-color: $bgDisabled;
         opacity: 0.4;
     }
 }

@@ -11,25 +11,24 @@ body {
 }
 
 h1 {
-    @include fonts(100px, 800, 117px);
+    @include fonts(150px, 800, 176px);
 }
 
 h2 {
-    @include fonts(96px, 700, 116px);    
+     @include fonts(144px, 800, 173px);   
 }
 
-// h3 {
-//     @include fonts(20px, 32px);
-//     font-weight: 500;
-// }
+h3 {
+    @include fonts(96px, 700, 116px);
+}
 
 h4 {
-    @include fonts(20px, 600, 30px);
+    @include fonts(48px, 700, 60px);
 }
 
-// h5 {
-//     @include fonts(15px, 26px);
-// }
+h5 {
+    @include fonts(20px, 600, 30px);
+}
 
 a {
     color: $default;    
