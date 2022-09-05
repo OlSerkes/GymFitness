@@ -175,7 +175,7 @@ background-image: url(../img/bg.png);
     }
     &__block-content{
         display: flex; 
-        margin-bottom: 100px;       
+        margin-bottom: 100px;             
     }
     &__block-title{
         width: 448px;
@@ -195,9 +195,59 @@ background-image: url(../img/bg.png);
         box-shadow: 0px 50px 100px rgba(194, 183, 194, 0.3);
         border-radius: 20px;
         padding: 51px 38px 30px 30px;
+        position: relative;        
+            &::before {
+                content: "";
+                position: absolute;
+                width: 46px;
+                height: 46px;
+                left: 29px;
+                top: 44px;
+                background-color: $default;
+                border-radius: 50%;
+            }
+
+            
+    }
+    &__block-item--muscle{
+        &::after{           
+            @include image(url(../img/muscule-building.png), 100px, 46px, 24px, 14px);
+        }
+    }
+    &__block-item--workout{
+    &::after {
+            @include image(url(../img/workout.png), 100px, 46px, 24px, 24px);
+        }
+    }
+    &__block-item--target{
+        &::after {
+                @include image(url(../img/target.png), 100px, 46px, 24px, 43px);
+            }
+    }
+    &__block-item--cardio{
+        &::after {
+                @include image(url(../img/cardio.png), 100px, 46px, 24px, 32px);
+            }
     }
     &__block-item--title{
         @include fonts(24px, 500, 29px);
         margin-bottom: 50px;
+        margin-left: 120px;
+    }
+    &__block-item--text{
+        margin-bottom: 40px;
+    }
+    &__block-item--link{
+        @include fonts(18px, 500, 28px);
+        text-transform: uppercase;
+        color: $span;
+        position: relative;
+        &::after{
+            content: url(../img/arrow-right.svg);
+            position: absolute;
+            background-repeat: no-repeat;
+            left: 130px;
+            top: 0;
+        }
     }
 }

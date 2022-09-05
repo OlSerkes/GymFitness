@@ -15,15 +15,15 @@ $mainSloganColor: #FFE7FD;
 //     color: $default;
 // }
 
-// @mixin bgImage($height, $width, $top, $left) {
-//     position: absolute;
-//     content: "";
-//     background-repeat: no-repeat;
-//     height: $height;
-//     width: $width;
-//     top: $top;
-//     left: $left;
-// }
+@mixin image($image, $height, $width, $top, $left) {    
+    content: $image;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: $height;
+    width: $width;
+    top: $top;
+    left: $left;
+}
 
 @mixin fonts($fontSize, $fontWeight, $lineHeight) {
     font-size: $fontSize;

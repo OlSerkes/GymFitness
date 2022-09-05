@@ -291,9 +291,67 @@ button {
   background: #FFFFFF;
   box-shadow: 0px 50px 100px rgba(194, 183, 194, 0.3);
   border-radius: 20px;
-  padding: 51px 38px 30px 30px; }
+  padding: 51px 38px 30px 30px;
+  position: relative; }
+  .workout__block-item::before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 29px;
+    top: 44px;
+    background-color: #191718;
+    border-radius: 50%; }
+.workout__block-item--muscle::after {
+  content: url(../img/muscule-building.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 46px;
+  top: 24px;
+  left: 14px; }
+.workout__block-item--workout::after {
+  content: url(../img/workout.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 46px;
+  top: 24px;
+  left: 24px; }
+.workout__block-item--target::after {
+  content: url(../img/target.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 46px;
+  top: 24px;
+  left: 43px; }
+.workout__block-item--cardio::after {
+  content: url(../img/cardio.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 46px;
+  top: 24px;
+  left: 32px; }
 .workout__block-item--title {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-left: 120px; }
+.workout__block-item--text {
+  margin-bottom: 40px; }
+.workout__block-item--link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #FF48F7;
+  position: relative; }
+  .workout__block-item--link::after {
+    content: url(../img/arrow-right.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 130px;
+    top: 0; }
