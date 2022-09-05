@@ -171,7 +171,7 @@ background-image: url(../img/bg.png);
         border-radius: 20px 20px 0px 0px;
         backdrop-filter: blur(500px);
         margin-top: 240px;
-        padding: 100px 82px 369px 81px;
+        padding: 100px 82px 77px 81px;
     }
     &__block-content{
         display: flex; 
@@ -189,6 +189,7 @@ background-image: url(../img/bg.png);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 39px;
+        margin-bottom: 51px;
     }
     &__block-item{
         background: #FFFFFF;
@@ -249,5 +250,17 @@ background-image: url(../img/bg.png);
             left: 130px;
             top: 0;
         }
+    }
+    &__block-slogan{
+        margin-left: -90px;
+    }
+    &__block-slogan--title{
+        @include fonts(216px, 800, 261px);
+        letter-spacing: 0.145em;
+        background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFAFF 82.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        
     }
 }

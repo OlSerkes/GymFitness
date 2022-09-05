@@ -23,13 +23,16 @@ h3 {
 }
 
 h4 {
-    @include fonts(48px, 700, 60px);
+    @include fonts(64px, 700, 82px);
 }
 
 h5 {
-    @include fonts(20px, 600, 30px);
+    @include fonts(48px, 700, 60px);
 }
 
+h6 {
+    @include fonts(20px, 600, 30px);
+}
 a {
     color: $default;    
 }

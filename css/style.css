@@ -62,11 +62,16 @@ h3 {
   line-height: 116px; }
 
 h4 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 82px; }
+
+h5 {
   font-size: 48px;
   font-weight: 700;
   line-height: 60px; }
 
-h5 {
+h6 {
   font-size: 20px;
   font-weight: 600;
   line-height: 30px; }
@@ -259,7 +264,7 @@ button {
   border-radius: 20px 20px 0px 0px;
   backdrop-filter: blur(500px);
   margin-top: 240px;
-  padding: 100px 82px 369px 81px; }
+  padding: 100px 82px 77px 81px; }
 .workout__block-content {
   display: flex;
   margin-bottom: 100px; }
@@ -286,7 +291,8 @@ button {
 .workout__block-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 39px; }
+  gap: 39px;
+  margin-bottom: 51px; }
 .workout__block-item {
   background: #FFFFFF;
   box-shadow: 0px 50px 100px rgba(194, 183, 194, 0.3);
@@ -355,3 +361,14 @@ button {
     background-repeat: no-repeat;
     left: 130px;
     top: 0; }
+.workout__block-slogan {
+  margin-left: -90px; }
+.workout__block-slogan--title {
+  font-size: 216px;
+  font-weight: 800;
+  line-height: 261px;
+  letter-spacing: 0.145em;
+  background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFAFF 82.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; }
