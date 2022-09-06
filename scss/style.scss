@@ -264,3 +264,59 @@ background-image: url(../img/bg.png);
         
     }
 }
+
+.results{
+    &__block-inner{
+        display: flex;
+
+    }
+    &__block-info{
+        margin-right: 549px;
+    }
+    &__block-title{
+        @include fonts(64px, 700, 82px);
+        width: 721px;
+        height: 164px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    &__block-text{
+        @include fonts(18px, 500, 30px);
+        width: 568px;
+        
+    }
+    &__block-trainer{
+        width: 330px;
+        height: 110px;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(50px);
+        border-radius: 20px;
+        position: relative;
+        padding: 7px 27px 7px 20px;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url(../img/avatar-trainer.jpg);
+            background-repeat: no-repeat;
+            background-size: auto 96px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            //right: 19px;
+            top: 16px;
+        }
+    }
+    &__block-trainer--title{
+        @include fonts(14px, 400, 30px);
+        text-transform: uppercase;
+        padding-top: 23px;
+        padding-left: 115px;
+    }
+    &__block-trainer--item{
+        @include fonts(30px, 600, 30px);
+        padding-left: 115px;
+    }
+    &__block-grid{
+        display: grid;
+    }
+}
