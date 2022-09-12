@@ -580,12 +580,56 @@ button {
   gap: 50px; }
 .clubMaster__block-item {
   padding: 46px 30px 30px 30px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  position: relative; }
+  .clubMaster__block-item::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
+    top: 35px; }
+  .clubMaster__block-item::after {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #FF48F7;
+    top: 55px;
+    left: 49px; }
+.clubMaster__block-item--title {
+  margin-left: 120px;
+  margin-bottom: 44px; }
+.clubMaster__block-item--text {
+  margin-bottom: 40px; }
+.clubMaster__block-item--link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #FF48F7;
+  text-transform: uppercase;
+  position: relative; }
+  .clubMaster__block-item--link::after {
+    content: url(../img/arrow-right.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    transform: translateX(11px);
+    top: 0; }
 .clubMaster__block-item01 {
   background: #F6F4FF; }
+  .clubMaster__block-item01::after {
+    content: "01"; }
 .clubMaster__block-item02 {
   background: #F4F7FF; }
+  .clubMaster__block-item02::after {
+    content: "02"; }
 .clubMaster__block-item03 {
   background: #FFF4FF; }
+  .clubMaster__block-item03::after {
+    content: "03"; }
 .clubMaster__block-item04 {
   background: #FFF4F4; }
+  .clubMaster__block-item04::after {
+    content: "04"; }
