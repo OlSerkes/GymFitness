@@ -73,9 +73,9 @@ h5 {
   line-height: 60px; }
 
 h6 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px; }
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px; }
 
 a {
   color: #191718; }
@@ -203,6 +203,9 @@ button {
     opacity: 0.4; }
 
 .subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
   text-transform: uppercase;
   color: #FF48F7;
   margin-bottom: 15px; }
@@ -342,9 +345,6 @@ button {
   top: 24px;
   left: 32px; }
 .workout__block-item--title {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 29px;
   margin-bottom: 50px;
   margin-left: 120px; }
 .workout__block-item--text {
@@ -512,6 +512,18 @@ button {
   position: absolute;
   top: 1px;
   box-shadow: 2px 22px 13px -2px #ffdefd; }
+.results__block-slogan {
+  margin-top: 58px;
+  margin-bottom: 13px; }
+.results__block-slogan--title {
+  font-size: 180px;
+  font-weight: 800;
+  line-height: 218px;
+  letter-spacing: 0.145em;
+  background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFFFF 82.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; }
 
 .play {
   width: 79px;
@@ -558,3 +570,22 @@ button {
     opacity: 0; }
   .rating__value {
     display: none; }
+
+.clubMaster__block {
+  display: flex; }
+.clubMaster__block-items {
+  display: grid;
+  grid-template-columns: repeat(2, 366px);
+  grid-template-rows: repeat(2, 332px);
+  gap: 50px; }
+.clubMaster__block-item {
+  padding: 46px 30px 30px 30px;
+  border-radius: 20px; }
+.clubMaster__block-item01 {
+  background: #F6F4FF; }
+.clubMaster__block-item02 {
+  background: #F4F7FF; }
+.clubMaster__block-item03 {
+  background: #FFF4FF; }
+.clubMaster__block-item04 {
+  background: #FFF4F4; }
