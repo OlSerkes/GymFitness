@@ -86,6 +86,7 @@ a:hover {
 
 button {
   border: none;
+  cursor: pointer;
   transition-duration: 0.4s; }
 
 .container {
@@ -201,6 +202,8 @@ button {
   .button:disabled {
     background-color: #d2c9c9;
     opacity: 0.4; }
+  .button__arrow {
+    background-color: transparent; }
 
 .subtitle {
   font-size: 20px;
@@ -678,9 +681,19 @@ button {
   font-weight: 400;
   line-height: 58px; }
 
+.client__block {
+  position: relative; }
+  .client__block::before {
+    content: url(../img/triangle-slider.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 45px;
+    left: -200px; }
 .client__content-box {
   text-align: center;
   margin-bottom: 20px; }
+.client__slider {
+  position: relative; }
 .client__content-box-text {
   margin: 20px 550px 102px; }
 .client__slides {
@@ -688,7 +701,7 @@ button {
   flex-direction: row; }
 .client__slides-box {
   display: flex;
-  margin-right: 61px; }
+  min-width: 100%; }
 .client__slides-img {
   position: absolute;
   background-color: #FFFFFF;
@@ -705,7 +718,7 @@ button {
   width: 841px;
   position: relative;
   left: -106px;
-  padding: 83px 58px 43px 117px; }
+  padding: 74px 58px 37px 117px; }
 .client___slides-info {
   margin-bottom: 30px; }
 .client__slides-text {
@@ -717,6 +730,12 @@ button {
   justify-content: space-between;
   align-items: center;
   margin: 0 40px; }
+.client__slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  margin-top: 72px; }
 
 .hexagon-box {
   display: block;
