@@ -637,10 +637,29 @@ background-image: url(../img/bg.png);
     }
     &__slides-box{
         display: flex;
+        margin-right: 61px;
+    }
+    &__slides-img{
+        position: absolute;
+        background-color: $colorText;
+        top: 2px;
+        left: 2px;
+        width: 416px;
+        height: 375px;
+        clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     }
     &__slides-inner{
-        width: 663px;
-        margin: 37px 65px 18px 12px;
+        border: 1px solid $span;
+        border-left: 0;
+        width: 841px;
+        position: relative;
+        left: -106px;
+        padding: 83px 58px 43px 117px;
+    }
+    &___slides-info{
+        margin-bottom: 30px;
     }
     &__slides-text{
         @include fonts(24px, 500, 38px);
@@ -650,6 +669,30 @@ background-image: url(../img/bg.png);
         justify-content: space-between;
         align-items: center;
         margin: 0 40px;
+    }
+}
+
+.hexagon-box{
+    display: block;
+    position: relative;
+    width: 420px;
+    height: 377.72px;
+    background: $span;
+    box-sizing: border-box;
+    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        // transform: translateX(-153px);
+    img{
+        position: absolute;
+        background-color: $colorText;
+        top: 12px;
+        left: 18px;
+        width: 380px;
+        height: 349px;
+        clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     }
 }
 
