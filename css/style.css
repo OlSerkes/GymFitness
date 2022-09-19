@@ -776,12 +776,77 @@ button {
 .blog__block-img {
   border-radius: 20px; }
 .blog__block-article {
-  background: linear-gradient(97.56deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(175.56deg, #e2baa8 0%, rgba(248, 249, 251, 0.3) 100%);
   box-shadow: 0px 50px 100px rgba(154, 144, 154, 0.1);
   backdrop-filter: blur(50px);
   border-radius: 20px;
+  padding: 30px;
   position: absolute;
   width: 560px;
   height: 258px;
   top: 339px;
-  left: 143px; }
+  left: 113px; }
+.blog__block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.blog__block-button {
+  color: #191718;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  width: 99px;
+  height: 58px;
+  border-radius: 45px;
+  background-color: #FFD6FD;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px; }
+  .blog__block-button:hover {
+    background-color: #FFFFFF;
+    color: #FF48F7;
+    transition: 0.5s; }
+  .blog__block-button:disabled {
+    background-color: #d2c9c9;
+    opacity: 0.4; }
+.blog__block-author {
+  opacity: 0.5; }
+.blog__block-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  padding: 30px 0; }
+.blog__block-link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #FF48F7;
+  text-transform: uppercase;
+  position: relative; }
+  .blog__block-link::after {
+    content: url(../img/arrow-right.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    transform: translateX(11px);
+    top: 0; }
+
+.accordion {
+  cursor: pointer;
+  border-top: 1px solid rgba(25, 23, 24, 0.2);
+  border-bottom: 1px solid rgba(25, 23, 24, 0.2);
+  background: transparent;
+  position: relative;
+  width: 100%; }
+  .accordion-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35px;
+    padding: 30px 0;
+    text-align: left;
+    max-width: 478px; }
+  .accordion::after {
+    content: url(../img/arrow-up-right-accord.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 50px;
+    left: 570px; }
