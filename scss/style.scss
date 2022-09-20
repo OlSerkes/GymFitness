@@ -788,27 +788,56 @@ background-image: url(../img/bg.png);
 }
 
 .accordion{ 
-    cursor: pointer;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid rgba(25, 23, 24, 0.2);
     border-bottom: 1px solid rgba(25, 23, 24, 0.2);     
-    background: transparent;
-    position: relative;
+    background: transparent;    
     width: 100%;
     &-title{
         @include fonts(24px, 500, 35px);
         padding: 30px 0;
         text-align: left;
         max-width: 478px;
-    }    
-    &::after {
-        content: url(../img/arrow-up-right-accord.png);
-        position: absolute;
-        background-repeat: no-repeat;
-        top: 50px;
-        left: 570px;
     }
+    &-btn{
+        cursor: pointer;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $cirkleBgColor;        
+        &::after {
+            content: url(../img/arrow-up-right-accord.png);
+            position: absolute;
+            background-repeat: no-repeat;            
+            top: 50%;
+            left: 25%;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            background: $span;
+            &::after{
+                content: url(../img/arrow-up-right-accord-active.png);
+            }
+        }
         
-    
+    }     
+}
+
+.accordion.active .accordion-btn::after{    
+    content: url(../img/arrow-up-right-accord-active.png);        
+}
+.accordion.active .accordion-btn{
+    background: $span;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 
