@@ -761,6 +761,8 @@ button {
     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
 
+.blog__block {
+  margin-bottom: 340px; }
 .blog__block-title {
   margin-top: 225px;
   margin-bottom: 100px;
@@ -876,3 +878,39 @@ button {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out; }
+
+.banner {
+  background: #191718;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 93px 0; }
+  .banner-slogan__title {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    color: #FFFFFF;
+    margin-bottom: 24px; }
+  .banner-slogan__text {
+    color: #FFFFFF;
+    max-width: 479px; }
+  .banner-contact__btn {
+    color: #FF48F7;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    position: relative; }
+    .banner-contact__btn::before {
+      content: url(../img/btn-arrow-right.png);
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 22px; }
+    .banner-contact__btn:hover {
+      color: #FFFFFF;
+      transition: 0.5s; }
+      .banner-contact__btn:hover::before {
+        content: url(../img/btn-arrow-right-hover.svg);
+        transition: 0.5s; }

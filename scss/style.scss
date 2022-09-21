@@ -724,6 +724,9 @@ background-image: url(../img/bg.png);
 }
 
 .blog{
+    &__block{
+        margin-bottom: 340px;
+    }
     &__block-title{
         margin-top: 225px;
         margin-bottom: 100px;
@@ -738,8 +741,7 @@ background-image: url(../img/bg.png);
         margin-right: 116px;
     }
     &__block-images{
-        max-width: 846px; 
-               
+        max-width: 846px;               
     }
     &__block-img{
         border-radius: 20px;
@@ -758,8 +760,8 @@ background-image: url(../img/bg.png);
     }
     &__block-header{
         display: flex;
-            justify-content: space-between;
-            align-items: center;
+        justify-content: space-between;
+        align-items: center;
     }
     &__block-button{
         @include button($default, $colorText, 99px, $smallBtnBG, $colorText, $span, $bgColorDisabled);
@@ -822,7 +824,6 @@ background-image: url(../img/bg.png);
                 content: url(../img/arrow-up-right-accord-active.png);
             }
         }
-        
     }     
 }
 
@@ -838,6 +839,45 @@ background-image: url(../img/bg.png);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.banner {
+    background: $default;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 93px 0;
+    &-slogan__title{
+        @include fonts(64px, 400, 80px);
+        color: $colorText;
+        margin-bottom: 24px;
+    }
+    &-slogan__text{
+        color: $colorText; 
+        max-width: 479px;       
+    }
+    &-contact__btn{
+        color: $span;
+        @include fonts(24px, 600, 30px);
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
+        position: relative;
+        &::before{
+            content: url(../img/btn-arrow-right.png);
+            position: absolute;
+            background-repeat: no-repeat;
+            top: 22px;
+        }
+        &:hover{
+            color: $colorText;
+            transition: 0.5s;
+            &::before{
+                content: url(../img/btn-arrow-right-hover.svg);
+                transition: 0.5s;
+            }
+        }
+    }
 }
 
 
