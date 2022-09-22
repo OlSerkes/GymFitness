@@ -290,7 +290,8 @@ background-image: url(../img/bg.png);
                 position: absolute; 
                 background-repeat: no-repeat;               
                 left: 997px;
-                top: -696px;                
+                top: -696px;
+                z-index: -1;                
             }
     } 
     &__block-box{

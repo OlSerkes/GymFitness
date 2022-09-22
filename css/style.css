@@ -402,7 +402,8 @@ button {
     position: absolute;
     background-repeat: no-repeat;
     left: 997px;
-    top: -696px; }
+    top: -696px;
+    z-index: -1; }
 .results__block-box {
   position: relative; }
   .results__block-box::before {
