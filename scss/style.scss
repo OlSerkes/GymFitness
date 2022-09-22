@@ -156,7 +156,8 @@ background-image: url(../img/bg.png);
     } 
     &__button{
         @include button($colorText, $default, 152px, $default, $colorText, $default, $bgColorDisabled);
-        margin-right: 10px;        
+        margin-right: 10px; 
+        position: relative;       
     }
 }
 .color-span{

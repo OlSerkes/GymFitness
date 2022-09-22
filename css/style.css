@@ -257,7 +257,8 @@ button {
     border-radius: 45px;
     background-color: #191718;
     text-transform: uppercase;
-    margin-right: 10px; }
+    margin-right: 10px;
+    position: relative; }
     .main__button:hover {
       background-color: #FFFFFF;
       color: #191718;
