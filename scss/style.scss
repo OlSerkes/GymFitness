@@ -10,30 +10,18 @@
 .wrapper{
 background-image: url(../img/bg.png);
     background-repeat: no-repeat;
-    background-position: top left;
-    // &::before{
-    //     content: url(../img/bg-fone-man.png);
-    //     background-repeat: no-repeat;
-    //     background-position: center;
+    background-position: top left;    
+    // &::after{
+    //     content: url(../img/main-fone.png);       
+    //     background-position: left;
     //     position: absolute;
-    //         width: 1920px;
-    //         height: 1396px;
-    //         left: 0px;
-    //         top: 0px;
-    //         z-index: -1;            
-    // }
-    &::after{
-        content: url(../img/main-fone.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        position: absolute;
-        width: 1920px;
-        height: 1920px;
-        left: 0px;
-        top: 0px;
-        mix-blend-mode: overlay;
+    //     width: 1920px;
+    //     height: 1920px;
+    //     left: 0px;
+    //     top: 0px;
+    //     mix-blend-mode: overlay;
 
-    }
+    // }
 }
 .header{     
     &__main{       
@@ -106,6 +94,10 @@ background-image: url(../img/bg.png);
     }
     &__list-link{
         @include fonts(18px, 500, 22px);
+        &:hover{
+            @include hr($hover);
+        }
+        
     }
     
 }
@@ -248,12 +240,22 @@ background-image: url(../img/bg.png);
         text-transform: uppercase;
         color: $span;
         position: relative;
+
         &::after{
-            content: url(../img/arrow-right.svg);
+            content: "";
+            background-image: url(../img/arrow-right.svg);
             position: absolute;
-            background-repeat: no-repeat;
-            left: 130px;
-            top: 0;
+            background-repeat: no-repeat;                
+            width: 24px;
+            height: 24px;
+            top: 0px;
+            left: 125px;            
+        }
+        &:hover{
+            &::after{                
+                background-image: url(../img/arrow-right-hover.svg);
+                transition: 0.4s;  
+            }
         }
     }
     &__block-slogan{
@@ -682,6 +684,12 @@ background-image: url(../img/bg.png);
     }
     &__slide-text{
         @include fonts(24px, 500, 38px);
+        position: relative;
+        &::before{
+            content: url(../img/quotes.png);
+            position: absolute;
+            top: -30px;
+        }
     }
     &__slide-user-items{
         display: flex;
@@ -881,12 +889,12 @@ background-image: url(../img/bg.png);
 }
 
 .footer{
-    margin: 168px 0 60px;    
+    margin-top: 168px;    
     &__inner{
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-left: 72px;
+        justify-content: space-between;        
+    }
+    &__social{
         margin-bottom: 60px;
     }
     &__slogan-text{
@@ -919,6 +927,17 @@ background-image: url(../img/bg.png);
         @include fonts(18px, 500, 22px);
         opacity: 0.8;
         margin: 12.5px 0;
+    }
+    &__copyright{
+        margin: 35px 0;
+    }
+    &__block-text{
+        display: flex;
+        align-items: center;
+    }
+    &__copyright-list-links{
+        display: flex;
+        gap: 60px;
     }
 }
 

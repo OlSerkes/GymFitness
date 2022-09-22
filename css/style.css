@@ -78,11 +78,15 @@ h6 {
   line-height: 29px; }
 
 a {
-  color: #191718; }
+  color: #191718;
+  cursor: pointer; }
 
 a:hover {
   color: #0a0a0a;
-  text-decoration: none; }
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: 0.4s; }
 
 button {
   border: none;
@@ -110,16 +114,6 @@ button {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-position: top left; }
-  .wrapper::after {
-    content: url(../img/main-fone.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    position: absolute;
-    width: 1920px;
-    height: 1920px;
-    left: 0px;
-    top: 0px;
-    mix-blend-mode: overlay; }
 
 .header__main {
   position: relative; }
@@ -185,6 +179,15 @@ button {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px; }
+    .menu__list-link:hover {
+      position: relative; }
+      .menu__list-link:hover::before {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid #0a0a0a;
+        width: 130%;
+        left: -8px;
+        bottom: -12px; }
 
 .button {
   color: #FFFFFF;
@@ -360,11 +363,17 @@ button {
   color: #FF48F7;
   position: relative; }
   .workout__block-item--link::after {
-    content: url(../img/arrow-right.svg);
+    content: "";
+    background-image: url(../img/arrow-right.svg);
     position: absolute;
     background-repeat: no-repeat;
-    left: 130px;
-    top: 0; }
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    left: 125px; }
+  .workout__block-item--link:hover::after {
+    background-image: url(../img/arrow-right-hover.svg);
+    transition: 0.4s; }
 .workout__block-slogan {
   margin-left: -90px; }
 .workout__block-slogan--title {
@@ -727,7 +736,12 @@ button {
 .client__slide-text {
   font-size: 24px;
   font-weight: 500;
-  line-height: 38px; }
+  line-height: 38px;
+  position: relative; }
+  .client__slide-text::before {
+    content: url(../img/quotes.png);
+    position: absolute;
+    top: -30px; }
 .client__slide-user-items {
   display: flex;
   justify-content: space-between;
@@ -916,12 +930,11 @@ button {
         transition: 0.5s; }
 
 .footer {
-  margin: 168px 0 60px; }
+  margin-top: 168px; }
   .footer__inner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 72px;
+    justify-content: space-between; }
+  .footer__social {
     margin-bottom: 60px; }
   .footer__slogan-text {
     margin: 31px 0 50px;
@@ -952,3 +965,11 @@ button {
     line-height: 22px;
     opacity: 0.8;
     margin: 12.5px 0; }
+  .footer__copyright {
+    margin: 35px 0; }
+  .footer__block-text {
+    display: flex;
+    align-items: center; }
+  .footer__copyright-list-links {
+    display: flex;
+    gap: 60px; }

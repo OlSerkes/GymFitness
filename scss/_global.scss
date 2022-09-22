@@ -35,12 +35,16 @@ h6 {
     @include fonts(24px, 500, 29px);
 }
 a {
-    color: $default;    
+    color: $default; 
+    cursor: pointer;   
 }
 
 a:hover {
-    color: $hover;
+    color: $hover; 
+    cursor: pointer;
+    opacity: 0.8;
     text-decoration: none;
+    transition: 0.4s;    
 }
 
 button {
