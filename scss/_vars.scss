@@ -16,7 +16,6 @@ $cirkleBgColor: #FFD1FD;
 @mixin image($image, $height, $width, $top, $left) {    
     content: $image;
     position: absolute;
-    //background-repeat: no-repeat;
     height: $height;
     width: $width;
     top: $top;

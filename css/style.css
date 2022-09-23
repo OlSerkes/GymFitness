@@ -868,11 +868,10 @@ button {
       .accordion-btn:hover::after {
         content: url(../img/arrow-up-right-accord-active.png); }
 
-.accordion.active .accordion-btn::after {
-  content: url(../img/arrow-up-right-accord-active.png); }
-
 .accordion.active .accordion-btn {
   background: #FF48F7; }
+  .accordion.active .accordion-btn::after {
+    content: url(../img/arrow-up-right-accord-active.png); }
 
 .panel {
   padding: 0 18px;
