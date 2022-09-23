@@ -107,6 +107,26 @@ button {
   min-height: 100%;
   width: 1920px; }
 
+.link-wth-arrow {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #FF48F7;
+  text-transform: uppercase;
+  position: relative; }
+  .link-wth-arrow::after {
+    content: "";
+    background-image: url(../img/arrow-right.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    transform: translateX(11px); }
+  .link-wth-arrow:hover::after {
+    background-image: url(../img/arrow-right-hover.svg);
+    transition: 0.4s; }
+
 .hidden {
   display: none; }
 
@@ -322,7 +342,6 @@ button {
 .workout__block-item--muscle::after {
   content: url(../img/muscule-building.png);
   position: absolute;
-  background-repeat: no-repeat;
   height: 100px;
   width: 46px;
   top: 24px;
@@ -330,7 +349,6 @@ button {
 .workout__block-item--workout::after {
   content: url(../img/workout.png);
   position: absolute;
-  background-repeat: no-repeat;
   height: 100px;
   width: 46px;
   top: 24px;
@@ -338,7 +356,6 @@ button {
 .workout__block-item--target::after {
   content: url(../img/target.png);
   position: absolute;
-  background-repeat: no-repeat;
   height: 100px;
   width: 46px;
   top: 24px;
@@ -346,7 +363,6 @@ button {
 .workout__block-item--cardio::after {
   content: url(../img/cardio.png);
   position: absolute;
-  background-repeat: no-repeat;
   height: 100px;
   width: 46px;
   top: 24px;
@@ -356,25 +372,6 @@ button {
   margin-left: 120px; }
 .workout__block-item--text {
   margin-bottom: 40px; }
-.workout__block-item--link {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #FF48F7;
-  position: relative; }
-  .workout__block-item--link::after {
-    content: "";
-    background-image: url(../img/arrow-right.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    top: 0px;
-    left: 125px; }
-  .workout__block-item--link:hover::after {
-    background-image: url(../img/arrow-right-hover.svg);
-    transition: 0.4s; }
 .workout__block-slogan {
   margin-left: -90px; }
 .workout__block-slogan--title {
@@ -518,6 +515,7 @@ button {
     font-weight: 600;
     line-height: 26px; }
 .results__block-grid--btns {
+  display: flex;
   position: relative; }
 .results__block-grid--btn {
   margin-right: 30px;
@@ -535,7 +533,8 @@ button {
     top: 16px;
     left: 32px; }
   .results__block-grid--btn-play:hover::before {
-    background-image: url(../img/play-arrow-hover.svg); }
+    background-image: url(../img/play-arrow-hover.svg);
+    transition: 0.4s; }
 .results__block-slogan {
   margin-top: 58px;
   margin-bottom: 13px; }
@@ -632,19 +631,6 @@ button {
   margin-bottom: 44px; }
 .clubMaster__block-item--text {
   margin-bottom: 40px; }
-.clubMaster__block-item--link {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #FF48F7;
-  text-transform: uppercase;
-  position: relative; }
-  .clubMaster__block-item--link::after {
-    content: url(../img/arrow-right.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    transform: translateX(11px);
-    top: 0; }
 .clubMaster__block-item01 {
   background: #F6F4FF; }
   .clubMaster__block-item01::after {
@@ -669,8 +655,8 @@ button {
   margin-top: 30px; }
 .clubMaster__block-btns {
   margin-bottom: 80px; }
-.clubMaster__block-item--link {
-  margin-left: 30px; }
+.clubMaster__block-btn {
+  margin-right: 30px; }
 .clubMaster__block-content--items {
   display: grid;
   grid-template-columns: repeat(3, 200px);
@@ -847,19 +833,6 @@ button {
   font-weight: 500;
   line-height: 35px;
   padding: 30px 0; }
-.blog__block-link {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #FF48F7;
-  text-transform: uppercase;
-  position: relative; }
-  .blog__block-link::after {
-    content: url(../img/arrow-right.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    transform: translateX(11px);
-    top: 0; }
 
 .accordion {
   display: flex;

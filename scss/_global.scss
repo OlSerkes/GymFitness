@@ -34,6 +34,7 @@ h5 {
 h6 {
     @include fonts(24px, 500, 29px);
 }
+
 a {
     color: $default; 
     cursor: pointer;   
@@ -52,49 +53,6 @@ button {
     cursor: pointer;
     transition-duration: 0.4s;
 }
-
-// input[type="checkbox"] {
-//     display: none;
-// }
-
-// input[type="checkbox"]:checked+div[class] {
-//     height: auto;
-// }
-
-// input[type="text"],
-// input[type="email"],
-// input[type="password"] {
-//     padding: 10px;
-// }
-
-// input[type="text"]:hover,
-// input[type="email"]:hover,
-// input[type="password"]:hover,
-// textarea:hover {
-//     border: 1px solid $default;
-// }
-
-// input[type="text"]:hover::-webkit-input-placeholder,
-// input[type="email"]:hover::-webkit-input-placeholder,
-// input[type="password"]:hover::-webkit-input-placeholder,
-// textarea:hover::-webkit-input-placeholder {
-//     color: $default;
-// }
-
-// input[type="text"]:focus,
-// input[type="email"]:focus,
-// input[type="password"]:focus,
-// textarea:focus {
-//     border: 1px solid $default;
-//     color: $default;
-// }
-
-// input[type="text"]:invalid,
-// input[type="email"]:invalid,
-// input[type="password"]:invalid {
-//     border: 1px solid $error-color;
-// }
-
 
 
 // [tabindex]:focus {
@@ -121,4 +79,27 @@ button {
     flex-direction: column;
     min-height: 100%;
     width: 1920px;
+}
+
+.link-wth-arrow{
+    @include fonts(18px, 500, 30px);
+        color: $span;
+        text-transform: uppercase;
+        position: relative;       
+        &::after {
+           content: "";
+           background-image: url(../img/arrow-right.svg);
+           position: absolute;
+           background-repeat: no-repeat;
+           width: 24px;
+           height: 24px;
+           top: 0px;
+           transform: translateX(11px);
+        }
+        &:hover {
+            &::after {
+                background-image: url(../img/arrow-right-hover.svg);
+                transition: 0.4s;
+            }
+        }
 }
