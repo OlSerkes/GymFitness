@@ -523,9 +523,19 @@ button {
   margin-right: 30px;
   box-shadow: 2px 22px 13px -2px #E5E5E5; }
 .results__block-grid--btn-play {
-  position: absolute;
-  top: 1px;
+  position: relative;
   box-shadow: 2px 22px 13px -2px #ffdefd; }
+  .results__block-grid--btn-play::before {
+    content: "";
+    background-image: url(../img/play-arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    left: 32px; }
+  .results__block-grid--btn-play:hover::before {
+    background-image: url(../img/play-arrow-hover.svg); }
 .results__block-slogan {
   margin-top: 58px;
   margin-bottom: 13px; }
@@ -545,6 +555,9 @@ button {
   background: #FF48F7;
   border-radius: 26px;
   padding: 16px 13px 13px 20px; }
+  .play:hover {
+    background: #FFFFFF;
+    border: 1px solid #FF48F7; }
 
 .rating {
   display: flex;

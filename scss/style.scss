@@ -425,9 +425,22 @@ background-image: url(../img/bg.png);
         box-shadow: 2px 22px 13px -2px #E5E5E5;
     }
     &__block-grid--btn-play{
-        position: absolute;
-        top: 1px;
+        position: relative;
         box-shadow: 2px 22px 13px -2px #ffdefd;
+        &::before{
+            content: "";
+            background-image: url(../img/play-arrow.svg);
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 16px;
+            left: 32px;            
+        }
+        &:hover::before{
+            background-image: url(../img/play-arrow-hover.svg);
+        }
+        
     }
     &__block-slogan{
         margin-top: 58px;
@@ -446,10 +459,14 @@ background-image: url(../img/bg.png);
 
 .play{
     width: 79px;
-        height: 58px;
-        background: $span;
-        border-radius: 26px;
-        padding: 16px 13px 13px 20px;
+    height: 58px;
+    background: $span;
+    border-radius: 26px;
+    padding: 16px 13px 13px 20px;
+    &:hover{
+        background: $colorText;
+        border: 1px solid $span;
+    }
 }
 
 .rating {
