@@ -217,7 +217,8 @@ button {
   height: 58px;
   border-radius: 45px;
   background-color: #191718;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: 2px 22px 13px -2px #E5E5E5; }
   .button:hover {
     background-color: #FFFFFF;
     color: #191718;
@@ -277,6 +278,7 @@ button {
     border-radius: 45px;
     background-color: #191718;
     text-transform: uppercase;
+    box-shadow: 2px 22px 13px -2px #E5E5E5;
     margin-right: 10px;
     position: relative; }
     .main__button:hover {
@@ -311,6 +313,7 @@ button {
   border-radius: 45px;
   background-color: #FFFFFF;
   text-transform: uppercase;
+  box-shadow: 2px 22px 13px -2px transparent;
   opacity: 0.7; }
   .workout__block-btn:hover {
     background-color: #FF48F7;
@@ -518,8 +521,7 @@ button {
   display: flex;
   position: relative; }
 .results__block-grid--btn {
-  margin-right: 30px;
-  box-shadow: 2px 22px 13px -2px #E5E5E5; }
+  margin-right: 30px; }
 .results__block-grid--btn-play {
   position: relative;
   box-shadow: 2px 22px 13px -2px #ffdefd; }
@@ -816,11 +818,12 @@ button {
   border-radius: 45px;
   background-color: #FFD6FD;
   text-transform: uppercase;
+  box-shadow: 2px 22px 13px -2px #FFFFFF;
   font-size: 14px;
   font-weight: 600;
   line-height: 40px; }
   .blog__block-button:hover {
-    background-color: #FFFFFF;
+    background-color: #E5E5E5;
     color: #FF48F7;
     transition: 0.5s; }
   .blog__block-button:disabled {

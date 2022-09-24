@@ -7,6 +7,8 @@ $hover: #0a0a0a;
 $mainSloganColor: #FFE7FD;
 $yellowStar: #FFB801;
 $cirkleBgColor: #FFD1FD;
+$btnShadowDark: #E5E5E5;
+$btnShadowPink: #ffdefd;
 
 %font-main {
     font-family: "Inter", sans-serif;
@@ -59,6 +61,7 @@ $cirkleBgColor: #FFD1FD;
     $width,
     $bgColor,    
     $bgColorHover,
+    $shadowColor,
     $textColorHover,
     $bgDisabled) {
     color: $textColor;
@@ -69,6 +72,7 @@ $cirkleBgColor: #FFD1FD;
     border-radius: 45px;
     background-color: $bgColor;    
     text-transform: uppercase;
+    box-shadow: 2px 22px 13px -2px $shadowColor;
     &:hover {
         background-color: $bgColorHover;
         color: $textColorHover;
