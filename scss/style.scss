@@ -733,7 +733,7 @@ background-image: url(../img/bg.png);
         align-items: center;
     }
     &__block-button{
-        @include button($default, $colorText, 99px, $smallBtnBG, $btnShadowDark, $colorText, $span, $bgColorDisabled);
+        @include button($default, $colorText, 99px, $smallBtnBG, $colorText, transparent, $span, $bgColorDisabled);
         @include fonts(14px, 600, 40px);
     }
     &__block-author{

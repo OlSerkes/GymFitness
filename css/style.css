@@ -818,12 +818,12 @@ button {
   border-radius: 45px;
   background-color: #FFD6FD;
   text-transform: uppercase;
-  box-shadow: 2px 22px 13px -2px #FFFFFF;
+  box-shadow: 2px 22px 13px -2px transparent;
   font-size: 14px;
   font-weight: 600;
   line-height: 40px; }
   .blog__block-button:hover {
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
     color: #FF48F7;
     transition: 0.5s; }
   .blog__block-button:disabled {
