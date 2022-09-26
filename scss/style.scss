@@ -857,6 +857,11 @@ background-image: url(../img/bg.png);
     &__social-item{
         margin-right: 16px;
     }
+    &__social-link{
+        &:active {
+            filter: contrast(153%) brightness(0%) opacity(0.6);
+            }
+    }
     &__title{
         @include fonts(18px, 500, 22px);
         text-transform: uppercase;
@@ -866,7 +871,8 @@ background-image: url(../img/bg.png);
         margin: 12.5px 0;
     }
     &__link{
-        opacity: 0.8;        
+        opacity: 0.8;
+                
     }
     &__span{
         @include fonts(48px, 400, 58px);
