@@ -3,6 +3,23 @@
 @import "reset";
 @import "global";
 
+#ourStory{
+    padding-top: 192px;
+    margin-top: -192px;
+}
+#workouts{
+    padding-top: 240px;
+    margin-top: -240px;
+}
+#products,
+#classes{
+    padding-top: 131px;
+    margin-top: -131px;
+}
+#clubs{
+    padding-top: 218px;
+    margin-top: -218px;
+}
 .hidden{
     display: none;
 }
