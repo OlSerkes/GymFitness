@@ -73,10 +73,10 @@ $btnShadowPink: #ffdefd;
     background-color: $bgColor;    
     text-transform: uppercase;
     box-shadow: 2px 22px 13px -2px $shadowColor;
+    transition: all 0.5s;
     &:hover {
         background-color: $bgColorHover;
-        color: $textColorHover;
-        transition: 0.5s;
+        color: $textColorHover;        
     }
     &:disabled {
         background-color: $bgDisabled;

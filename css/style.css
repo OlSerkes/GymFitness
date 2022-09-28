@@ -226,11 +226,11 @@ button {
   border-radius: 45px;
   background-color: #191718;
   text-transform: uppercase;
-  box-shadow: 2px 22px 13px -2px #E5E5E5; }
+  box-shadow: 2px 22px 13px -2px #E5E5E5;
+  transition: all 0.5s; }
   .button:hover {
     background-color: #FFFFFF;
-    color: #191718;
-    transition: 0.5s; }
+    color: #191718; }
   .button:disabled {
     background-color: #d2c9c9;
     opacity: 0.4; }
@@ -290,12 +290,12 @@ button {
     background-color: #191718;
     text-transform: uppercase;
     box-shadow: 2px 22px 13px -2px #E5E5E5;
+    transition: all 0.5s;
     margin-right: 10px;
     position: relative; }
     .main__button:hover {
       background-color: #FFFFFF;
-      color: #191718;
-      transition: 0.5s; }
+      color: #191718; }
     .main__button:disabled {
       background-color: #d2c9c9;
       opacity: 0.4; }
@@ -347,11 +347,11 @@ button {
   background-color: #FFFFFF;
   text-transform: uppercase;
   box-shadow: 2px 22px 13px -2px transparent;
+  transition: all 0.5s;
   opacity: 0.7; }
   .workout__block-btn:hover {
     background-color: #FF48F7;
-    color: #FFFFFF;
-    transition: 0.5s; }
+    color: #FFFFFF; }
   .workout__block-btn:disabled {
     background-color: #FF48F7;
     opacity: 0.4; }
@@ -557,7 +557,8 @@ button {
   margin-right: 30px; }
 .results__block-grid--btn-play {
   position: relative;
-  box-shadow: 2px 22px 13px -2px #ffdefd; }
+  box-shadow: 2px 22px 13px -2px #ffdefd;
+  transition: all 0.4s; }
   .results__block-grid--btn-play::before {
     content: "";
     background-image: url(../img/play-arrow.svg);
@@ -568,8 +569,7 @@ button {
     top: 16px;
     left: 32px; }
   .results__block-grid--btn-play:hover::before {
-    background-image: url(../img/play-arrow-hover.svg);
-    transition: 0.4s; }
+    background-image: url(../img/play-arrow-hover.svg); }
 .results__block-slogan {
   margin-top: 58px;
   margin-bottom: 13px; }
@@ -852,13 +852,13 @@ button {
   background-color: #FFD6FD;
   text-transform: uppercase;
   box-shadow: 2px 22px 13px -2px transparent;
+  transition: all 0.5s;
   font-size: 14px;
   font-weight: 600;
   line-height: 40px; }
   .blog__block-button:hover {
     background-color: #FFFFFF;
-    color: #FF48F7;
-    transition: 0.5s; }
+    color: #FF48F7; }
   .blog__block-button:disabled {
     background-color: #d2c9c9;
     opacity: 0.4; }
@@ -939,15 +939,15 @@ button {
     text-transform: uppercase;
     background: transparent;
     border: none;
-    position: relative; }
+    position: relative;
+    transition: all 0.5s; }
     .banner-contact__btn::before {
       content: url(../img/btn-arrow-right.png);
       position: absolute;
       background-repeat: no-repeat;
       top: 22px; }
     .banner-contact__btn:hover {
-      color: #FFFFFF;
-      transition: 0.5s; }
+      color: #FFFFFF; }
       .banner-contact__btn:hover::before {
         content: url(../img/btn-arrow-right-hover.svg);
         transition: 0.5s; }
