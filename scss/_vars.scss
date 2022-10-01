@@ -9,6 +9,7 @@ $yellowStar: #FFB801;
 $cirkleBgColor: #FFD1FD;
 $btnShadowDark: #E5E5E5;
 $btnShadowPink: #ffdefd;
+$modalBg: #FFEAFE;
 
 %font-main {
     font-family: "Inter", sans-serif;
@@ -96,4 +97,12 @@ $btnShadowPink: #ffdefd;
         }
 }
 
+@mixin animate($animation, $duration, $times) {
+    animation: $animation $duration $times;
+}
 
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
