@@ -85,13 +85,13 @@ $modalBg: #FFEAFE;
     }
 }
 
-@mixin hr($lineColor) {
+@mixin hr($lineColor, $width) {
     position: relative;    
         &::before {
             content: "";
             position: absolute;
             border-bottom: 2px solid $lineColor;
-            width: 130%;
+            width: $width;
             left: -8px;
             bottom: -12px;
         }

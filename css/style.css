@@ -170,6 +170,13 @@ button {
     align-items: center;
     margin-top: 41px;
     justify-content: space-between; }
+  .header__button {
+    display: none; }
+  .header__logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; }
 
 .logo {
   position: relative;
@@ -200,7 +207,7 @@ button {
 .menu {
   margin-right: 232px; }
   .menu__list {
-    display: flex; }
+    display: none; }
   .menu__list-item {
     margin: 0 30px 0 30px; }
   .menu__list-link {
@@ -249,7 +256,7 @@ button {
   background: transparent;
   position: absolute;
   right: 0;
-  padding-right: 30px;
+  padding-right: 72px;
   font-size: 50px;
   font-weight: 700;
   line-height: 50px;
@@ -291,10 +298,28 @@ button {
     opacity: 0; }
   100% {
     opacity: 1; } }
+.modal__header-menu {
+  padding: 50px; }
 .modal__nav-menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin: 100px 0; }
+.modal__list-item {
+  margin: 25px 0; }
+.modal__list-link {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 22px; }
+  .modal__list-link:hover {
+    position: relative; }
+    .modal__list-link:hover::before {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid #0a0a0a;
+      width: 115%;
+      left: -8px;
+      bottom: -12px; }
 
 .main {
   position: relative;
@@ -1049,3 +1074,16 @@ button {
   .footer__copyright-list-links {
     display: flex;
     gap: 60px; }
+
+@media (min-width: 768px) {
+  .menu__list {
+    display: flex; }
+
+  .header__logo {
+    display: block;
+    width: auto; }
+  .header__button {
+    display: inline-block; }
+
+  .open-btn {
+    display: none; } }
