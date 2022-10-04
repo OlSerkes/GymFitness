@@ -24,17 +24,13 @@
     display: none;
 }
 
-.wrapper{
-    background-image: url(../img/bg.png);
-    background-repeat: no-repeat;
-    background-position: top left;    
-}
+
 .header{ 
     position: sticky;
     min-height: 118px;
     top: 0;
     z-index: 4; 
-    background-image: url(../img/bg.png);    
+    // background-image: url(../img/bg.png);    
     &__inner{
         display: flex;
         align-items: center; 
@@ -54,42 +50,42 @@
 
 .logo{
     position: relative;
-    @include fonts(30px, 600, 36px);
-    margin-right: 266px;
-    padding-left: 72px;
-    &::before{
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        border: 6px solid $span;
-        top: -4px;
-        left: 18px;
-        width: 38px;
-        height: 38px;
-    }
-    &::after{        
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        border: 6px solid $span;
-        top: -4px;
-        left: 0px;
-        width: 38px;
-        height: 38px;
-    }
+//     @include fonts(30px, 600, 36px);
+//     //margin-right: 266px;
+//     padding-left: 72px;
+     &::before{
+         content: "";
+         position: absolute;
+         border-radius: 50%;
+//         border: 6px solid $span;
+//         top: -4px;
+         left: 18px;
+//         width: 38px;
+//         height: 38px;
+     }
+     &::after{        
+         content: "";
+         position: absolute;
+         border-radius: 50%;
+//         border: 6px solid $span;
+//         top: -4px;
+         left: 0px;
+//         width: 38px;
+//         height: 38px;
+     }
 }
 
 .menu{
-    margin-right: 232px;
+    //margin-right: 232px;
     &__list{
         //display: flex;
         display: none;
     }
-    &__list-item{
-        margin: 0 30px 0 30px;
-    }
+    // &__list-item{
+    //     margin: 0 30px 0 30px;
+    // }
     &__list-link{
-        @include fonts(18px, 500, 22px);
+        // @include fonts(18px, 500, 22px);
         &:hover{
             @include hr($hover, 130%);
         }        
@@ -104,7 +100,7 @@
 }
 
 .open-btn {
-    @include fonts(50px, 700, 50px);
+    //@include fonts(50px, 700, 50px);
     background-color: transparent;
     color: $default;
 }
@@ -228,17 +224,17 @@
     }
     &__bg{
         position: relative;
-            &::before{
-                content: "";
-                background-color: $span;
-                border-radius: 50%;
-                position: absolute;
-                width: 724px;
-                height: 724px;
-                left: -209px;
-                top: -110px;
-                z-index: -1;
-            }
+            // &::before{
+            //     content: "";
+            //     background-color: $span;
+            //     border-radius: 50%;
+            //     position: absolute;
+            //     width: 724px;
+            //     height: 724px;
+            //     left: -209px;
+            //     top: -110px;
+            //     z-index: -1;
+            // }
             &::after{
                 content: url(../img/man.png);
                 position: absolute;
@@ -1002,37 +998,182 @@
     }
 }
 
-@media (min-width: 768px){
-    .menu{
-        &__list {
-                display: flex;
-            }
+
+
+@media (min-width: 320px) {
+    .container{
+        margin-right: 50px;
+        margin-left: 50px;
     }
-     .header{
+    .wrapper{        
+        background-image: url(../img/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    }
+        .header{
+            &__logo{
+               
+            }
+        }
+        .logo {
+            @include fonts(20px, 500, 36px);  
+            padding-left: 53px;
+            &::before {                    
+                    border: 4px solid $span;
+                    top: 0px;
+                    width: 25px;
+                    height: 25px;
+                }
+            
+                &::after {                    
+                    border: 4px solid $span;
+                    top: 0px;
+                    width: 25px;
+                    height: 25px;
+                }
+        }
+                .open-btn {
+                    @include fonts(35px, 700, 36px);
+                    
+                }
+}
+
+@media (min-width: 480px) {
+    .wrapper {        
+        background-position: top left;
+        background-size: auto;
+    }
+    .header {
+        background-image: url(../img/bg.png);
+    }
+        .logo {
+            
+            @include fonts(30px, 600, 36px);            
+            padding-left: 72px;    
+            &::before {
+                border: 6px solid $span;
+                top: -4px;
+                width: 38px;
+                height: 38px;
+            }    
+            &::after {                
+                border: 6px solid $span;
+                top: -4px;
+                width: 38px;
+                height: 38px;
+            }
+        }
+                .open-btn {
+                    @include fonts(50px, 700, 50px);
+                    
+                }
+}
+@media (min-width: 768px) {
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__list-link {
+            @include fonts(15px, 400, 15px);            
+        }
+        &__list-item {
+            margin: 0 10px 0 10px;
+        }
+        
+    }
+    .header {
         &__logo {
             display: block;
             width: auto;
         }
+
         &__button {
-                display: inline-block;
+            display: inline-block;
+        }
+    }
+    .logo {
+        @include fonts(20px, 500, 36px);
+            padding-left: 53px;
+        &::before {
+                border: 4px solid $span;
+                top: -4px;
+                width: 25px;
+                height: 25px;
             }
-     }   
-    .open-btn{
+        
+            &::after {
+                border: 4px solid $span;
+                top: -4px;
+                width: 25px;
+                height: 25px;
+            }
+    }
+    .open-btn {
         display: none;
     }
+        .button {
+            @include fonts(8px, 400, 35px);
+            width: 100px;
+            height: 35px;
+        }
 }
 
-@media (min-width: 320px) {
-    .header{
-        // &__logo{
-        //     display: flex;
-        //     min-width: 100%;
-        //     justify-content: space-between;
-        //     align-items: center;
-        // }
+@media (min-width: 992px) {    
+    .logo {
+        @include fonts(30px, 600, 36px);                
+                padding-left: 72px;
+                &::before {
+                    border: 6px solid $span;
+                                top: -4px;
+                                width: 38px;
+                                height: 38px;
+                    }                
+                    &::after {
+                                border: 6px solid $span;
+                                top: -4px;
+                                width: 38px;
+                                height: 38px;
+                    }
+    }
+    .menu {
+        &__list-link {
+                @include fonts(18px, 500, 22px);
+            }
+    }
+     .button {
+        font-size: 12px;
+        width: 150px;
+     }    
+}
+
+@media (min-width: 1430px) {
+    .container {
+        margin-right: 160px;
+        margin-left: 160px;
+    }
+    .button {
+        @include fonts(18px, 500, 22px);
+        width: 237px;
+        height: 58px;
+    }
+    .menu {
+        
+        &__list-item {
+                margin: 0 30px 0 30px;
+            }
+    }
+        
+}
+@media (min-width: 1914px) {
+    .menu {
+        margin-right: 229px;        
+    }    
+    .logo{
+        margin-right: 266px;
     }
 }
-
 
 
 
