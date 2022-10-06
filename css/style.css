@@ -297,9 +297,6 @@ button {
   .main__slogan {
     color: #FFE7FD;
     position: absolute;
-    width: 802px;
-    left: 1431px;
-    top: 208px;
     text-transform: uppercase;
     transform: rotate(-90deg); }
   .main__info {
@@ -1021,7 +1018,8 @@ button {
   .wrapper {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    width: auto; }
 
   .logo {
     font-size: 20px;
@@ -1154,6 +1152,12 @@ button {
   .subtitle {
     font-size: 20px; } }
 @media (min-width: 992px) {
+  .wrapper {
+    background-size: 50%; }
+
+  .header {
+    background-size: 50%; }
+
   .logo {
     font-size: 30px;
     font-weight: 600;
@@ -1180,32 +1184,42 @@ button {
     width: 150px; }
 
   .main__slogan {
-    display: block; }
+    display: block;
+    width: 100%;
+    transform: rotate(-90deg) translateY(462px);
+    top: -88px;
+    font-size: 80px;
+    line-height: 0; }
   .main__bg {
     display: block; }
     .main__bg::after {
-      content: url(../img/man.png);
+      content: "";
+      background: url(../img/man.png);
       position: absolute;
       background-repeat: no-repeat;
-      background: linear-gradient(115deg, #ffe5f5 29%, #fffefb 88%);
-      width: 1366px;
-      height: 1092px;
-      left: -308px;
-      top: -260px;
+      background-size: cover;
+      width: 679px;
+      height: 611px;
+      transform: translate(-140px, 10px);
+      top: -94px;
       z-index: -1; }
   .main__inner {
     display: flex; }
   .main__info {
-    width: 700px; }
-    .main__info::before {
-      content: url(../img/wave.png);
-      background-repeat: no-repeat;
-      position: absolute;
-      width: 1920px;
-      height: 415px;
-      left: -199.53px;
-      top: 83px;
-      transform: rotate(-1.73deg); } }
+    width: 330px; } }
+@media (min-width: 1200px) {
+  .main__slogan {
+    transform: rotate(-90deg) translateY(545px);
+    top: -124px;
+    font-size: 92px; }
+  .main__bg::after {
+    transform: translate(0px, 10px); } }
+@media (min-width: 1305px) {
+  .main__slogan {
+    transform: rotate(-90deg) translateY(580px);
+    top: -176px; }
+  .main__bg::after {
+    transform: translate(39px, 10px); } }
 @media (min-width: 1430px) {
   .container {
     margin-right: 160px;
@@ -1219,7 +1233,16 @@ button {
     height: 58px; }
 
   .menu__list-item {
-    margin: 0 30px 0 30px; } }
+    margin: 0 30px 0 30px; }
+
+  .main__slogan {
+    font-size: 144px;
+    font-weight: 800;
+    line-height: 173px;
+    width: 802px;
+    left: 1431px;
+    top: 208px;
+    transform: rotate(-90deg); } }
 @media (min-width: 1914px) {
   .menu {
     margin-right: 229px; }
