@@ -292,21 +292,17 @@ button {
       bottom: -12px; }
 
 .main {
-  position: relative;
-  margin-top: 192px; }
+  position: relative; }
   .main__slogan {
     color: #FFE7FD;
     position: absolute;
-    text-transform: uppercase;
-    transform: rotate(-90deg); }
+    text-transform: uppercase; }
   .main__info {
     position: relative; }
   .main__title {
     margin-bottom: 30px; }
   .main__text {
-    color: rgba(25, 23, 24, 0.8);
-    width: 446px;
-    height: 60px; }
+    color: rgba(25, 23, 24, 0.8); }
   .main__button {
     color: #FFFFFF;
     box-sizing: border-box;
@@ -1186,7 +1182,8 @@ button {
   .main__slogan {
     display: block;
     width: 100%;
-    transform: rotate(-90deg) translateY(462px);
+    transform: rotate(-90deg);
+    left: calc(46% - 10px);
     top: -88px;
     font-size: 80px;
     line-height: 0; }
@@ -1198,28 +1195,20 @@ button {
       position: absolute;
       background-repeat: no-repeat;
       background-size: cover;
-      width: 679px;
-      height: 611px;
-      transform: translate(-140px, 10px);
-      top: -94px;
+      width: calc(967px + (1366 - 967) * ((100vw - 1366px) / (1920 - 1366)));
+      height: calc(611px + (1092 - 611) * ((100vw - 998px) / (1920 - 998)));
+      transform: translate(-247px, -96px);
       z-index: -1; }
   .main__inner {
     display: flex; }
   .main__info {
-    width: 330px; } }
+    width: calc(330px + (700 - 330) * ((100vw - 700px) / (1920 - 700))); } }
 @media (min-width: 1200px) {
+  .main__button {
+    font-size: 12px;
+    width: 125px; }
   .main__slogan {
-    transform: rotate(-90deg) translateY(545px);
-    top: -124px;
-    font-size: 92px; }
-  .main__bg::after {
-    transform: translate(0px, 10px); } }
-@media (min-width: 1305px) {
-  .main__slogan {
-    transform: rotate(-90deg) translateY(580px);
-    top: -176px; }
-  .main__bg::after {
-    transform: translate(39px, 10px); } }
+    font-size: 92px; } }
 @media (min-width: 1430px) {
   .container {
     margin-right: 160px;
@@ -1235,17 +1224,43 @@ button {
   .menu__list-item {
     margin: 0 30px 0 30px; }
 
-  .main__slogan {
-    font-size: 144px;
-    font-weight: 800;
-    line-height: 173px;
-    width: 802px;
-    left: 1431px;
-    top: 208px;
-    transform: rotate(-90deg); } }
+  .main {
+    margin-top: 192px; }
+    .main__slogan {
+      font-size: 144px;
+      font-weight: 800;
+      line-height: 173px;
+      top: -172px;
+      left: calc(44% - 1px); }
+    .main__title {
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 116px; }
+    .main__text {
+      width: 446px;
+      height: 60px; }
+    .main__button {
+      width: 152px;
+      height: 58px;
+      font: inherit; }
+    .main__bg::after {
+      transform: translate(-346px, -163px); } }
 @media (min-width: 1914px) {
   .menu {
     margin-right: 229px; }
 
   .logo {
-    margin-right: 266px; } }
+    margin-right: 266px; }
+
+  .main__slogan {
+    width: 802px;
+    left: 1431px;
+    top: 208px; }
+  .main__bg::after {
+    content: url(../img/man.png);
+    background: linear-gradient(115deg, #ffe5f5 29%, #fffefb 88%);
+    width: 1366px;
+    height: 1092px;
+    left: -308px;
+    top: -260px;
+    transform: none; } }

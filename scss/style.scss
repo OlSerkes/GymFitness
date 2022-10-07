@@ -3,6 +3,8 @@
 @import "reset";
 @import "global";
 
+
+
 #ourStory{
     padding-top: 192px;
     margin-top: -192px;
@@ -180,7 +182,7 @@
 }
 .main{    
     position: relative; 
-    margin-top: 192px;
+    // margin-top: 192px;
     &__slogan {
         color: $mainSloganColor;
         position: absolute;
@@ -188,7 +190,7 @@
         // left: 1431px;
         // top: 208px;
         text-transform: uppercase;
-        transform: rotate(-90deg);       
+        //transform: rotate(-90deg);       
     }
     // &__inner{
     //     display: flex;
@@ -214,8 +216,8 @@
         // @include fonts(18px, 500, 30px);
         color: rgba(25, 23, 24, 0.8);
         // margin-bottom: 50px;
-        width: 446px;
-        height: 60px;
+        // width: 446px;
+        // height: 60px;
     } 
     &__button{
         @include button($colorText, $default, 152px, $default, $colorText, $btnShadowDark, $default, $bgColorDisabled);
@@ -999,75 +1001,67 @@
 }
 
 
-
 @media (min-width: 320px) {
     #ourStory {
-            padding-top: 45px;
-            margin-top: -45px;
-        }
+        padding-top: 45px;
+        margin-top: -45px;
+    }
     .container{
         margin-right: 50px;
         margin-left: 50px;
     }
     .wrapper{        
         background-image: url(../img/bg.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
     }
-        .header{
-            &__logo{
-               
-            }
+    .logo {
+        @include fonts(20px, 500, 36px);  
+        padding-left: 53px;
+        &::before {                    
+            border: 4px solid $span;
+            top: 0px;
+            width: 25px;
+            height: 25px;
         }
-        .logo {
-            @include fonts(20px, 500, 36px);  
-            padding-left: 53px;
-            &::before {                    
-                    border: 4px solid $span;
-                    top: 0px;
-                    width: 25px;
-                    height: 25px;
-                }
-            
-                &::after {                    
-                    border: 4px solid $span;
-                    top: 0px;
-                    width: 25px;
-                    height: 25px;
-                }
+        &::after {                    
+            border: 4px solid $span;
+            top: 0px;
+            width: 25px;
+            height: 25px;
         }
-                .open-btn {
-                    @include fonts(35px, 700, 36px);
-                    
-                }
-                .main {
-                    margin-top: 45px;
-                    &__info{                        
-                        width: auto;
-                    }
-                    &__title{
-                        @include fonts(30px, 600, 45px);                        
-                    }
-                    &__bg {
-                        display: none;
-                    }
-                    &__slogan{
-                        display: none;
-                    }
-                    &__text{
-                        font-size: 13px;
-                        line-height: 25px;
-                    }
-                    &__button {
-                        width: 90px;
-                        height: 30px;
-                        font-size: 10px;
-                    }
-                }
-                .subtitle {
-                    font-size: 15px;
-                }
+    }
+    .open-btn {
+        @include fonts(35px, 700, 36px);                    
+    }
+    .main {
+        margin-top: 45px;
+        &__info{                        
+            width: auto;
+        }
+        &__title{
+            @include fonts(30px, 600, 45px);                        
+        }
+        &__bg {
+            display: none;
+        }
+        &__slogan{
+            display: none;
+        }
+        &__text{
+            font-size: 13px;
+            line-height: 25px;
+        }
+        &__button {
+            width: 90px;
+            height: 30px;
+            font-size: 10px;
+        }
+    }
+    .subtitle {
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 480px) {
@@ -1078,27 +1072,25 @@
     .header {
         background-image: url(../img/bg.png);
     }
-        .logo {
-            
-            @include fonts(30px, 600, 36px);            
-            padding-left: 72px;    
-            &::before {
-                border: 6px solid $span;
-                top: -4px;
-                width: 38px;
-                height: 38px;
-            }    
-            &::after {                
-                border: 6px solid $span;
-                top: -4px;
-                width: 38px;
-                height: 38px;
+    .logo {
+        @include fonts(30px, 600, 36px);            
+        padding-left: 72px;    
+        &::before {
+            border: 6px solid $span;
+            top: -4px;
+            width: 38px;
+            height: 38px;
+        }    
+        &::after {                
+            border: 6px solid $span;
+            top: -4px;
+            width: 38px;
+            height: 38px;
             }
-        }
-                .open-btn {
-                    @include fonts(50px, 700, 50px);
-                    
-                }
+    }
+    .open-btn {
+        @include fonts(50px, 700, 50px);
+    }
 }
 
 @media (min-width: 600px) {
@@ -1121,55 +1113,52 @@
         &__list-item {
             margin: 0 10px 0 10px;
         }
-        
     }
     .header {
         &__logo {
             display: block;
             width: auto;
         }
-
         &__button {
             display: inline-block;
         }
     }
     .logo {
         @include fonts(20px, 500, 36px);
-            padding-left: 53px;
+        padding-left: 53px;
         &::before {
-                border: 4px solid $span;
-                top: -4px;
-                width: 25px;
-                height: 25px;
-            }
-        
-            &::after {
-                border: 4px solid $span;
-                top: -4px;
-                width: 25px;
-                height: 25px;
-            }
+            border: 4px solid $span;
+            top: -4px;
+            width: 25px;
+            height: 25px;
+        }
+        &::after {
+            border: 4px solid $span;
+            top: -4px;
+            width: 25px;
+            height: 25px;
+        }
     }
     .open-btn {
         display: none;
     }
-        .button {
-            @include fonts(8px, 400, 35px);
-            width: 100px;
-            height: 35px;
+    .button {
+        @include fonts(8px, 400, 35px);
+        width: 100px;
+        height: 35px;
+    }
+    .main {
+        &__title {
+            @include fonts(55px, 700, 65px);
         }
-        .main {
-            &__title {
-                @include fonts(55px, 700, 65px);
-            }
-            &__text {
-                @include fonts(18px, 500, 30px);
-                margin-bottom: 50px;
-            }
+        &__text {
+            @include fonts(18px, 500, 30px);
+            margin-bottom: 50px;
         }
-        .subtitle {
-            font-size: 20px;
-        }
+    }
+    .subtitle {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) { 
@@ -1181,92 +1170,74 @@
     }
     .logo {
         @include fonts(30px, 600, 36px);                
-                padding-left: 72px;
-                &::before {
-                    border: 6px solid $span;
-                                top: -4px;
-                                width: 38px;
-                                height: 38px;
-                    }                
-                    &::after {
-                                border: 6px solid $span;
-                                top: -4px;
-                                width: 38px;
-                                height: 38px;
-                    }
+        padding-left: 72px;
+        &::before {
+            border: 6px solid $span;
+            top: -4px;
+            width: 38px;
+            height: 38px;
+        }                
+        &::after {
+            border: 6px solid $span;
+            top: -4px;
+            width: 38px;
+            height: 38px;
+        }
     }
     .menu {
         &__list-link {
-                @include fonts(18px, 500, 22px);
-            }
+            @include fonts(18px, 500, 22px);
+        }
     }
-     .button {
+    .button {
         font-size: 12px;
         width: 150px;
-     }  
-     .main {
+    }  
+    .main {
         &__slogan{
             display: block;
-            width: 100%;
-                transform: rotate(-90deg) translateY(462px);
-                    top: -88px;
-                    font-size: 80px;
-                line-height: 0;
+            width: 100%;            
+            transform: rotate(-90deg);
+            left: calc(46% - 10px);
+            top: -88px;
+            font-size: 80px;
+            line-height: 0;
         }
         &__bg{
             display: block;
-            
             &::after {                    
-                    content: "";
-                        background: url(../img/man.png);
-                        position: absolute;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        width: 679px;
-                        height: 611px;
-                            transform: translate(-140px, 10px);
-                        top: -94px;
-                        z-index: -1;
-                }
+                content: "";
+                background: url(../img/man.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: cover;                       
+                width: calc(967px + (1366 - 967) * ((100vw - 1366px) / (1920 - 1366)));                        
+                height: calc(611px + (1092 - 611) * ((100vw - 998px) / (1920 - 998)));
+                transform: translate(-247px, -96px);
+                z-index: -1;
+            }
         }
-                &__inner {
-                    display: flex;
-                }
-        &__info {           
-                    width: 330px;
-           
+        &__inner {
+            display: flex;
         }
-     }  
+        &__info {
+            width: calc(330px + (700 - 330) * ((100vw - 700px) / (1920 - 700)));
+        }
+    }  
 }
 
 @media (min-width: 1200px) {
     .main {
+        &__button {
+            font-size: 12px;
+            width: 125px;
+        }
         &__slogan {
-                transform: rotate(-90deg) translateY(545px);
-                top: -124px;
-                font-size: 92px;
-            }
-            &__bg {
-                &::after {
-                    transform: translate(0px, 10px);
-                }
-            }
+            font-size: 92px;
+        } 
     }
 }
-@media (min-width: 1305px) {
-    .main {
-        &__slogan{
-        transform: rotate(-90deg) translateY(580px);
-       top: -176px;
-             
-        }
-        &__bg {
-            &::after{
-                transform: translate(39px, 10px);
-            }
-        }
-    }
-}
+
 @media (min-width: 1430px) {
     .container {
         margin-right: 160px;
@@ -1278,28 +1249,61 @@
         height: 58px;
     }
     .menu {
-        
         &__list-item {
-                margin: 0 30px 0 30px;
-            }
+            margin: 0 30px 0 30px;
+        }
     }
     .main {
-       &__slogan{
-        @include fonts(144px, 800, 173px);
-        width: 802px;
-            left: 1431px;
-            top: 208px;
-        transform: rotate(-90deg);
-       } 
-    }
-        
+        margin-top: 192px;
+        &__slogan {
+            @include fonts(144px, 800, 173px);
+            top: -172px;
+            left: calc(44% - 1px);
+        }
+        &__title{
+            @include fonts(96px, 700, 116px);            
+        }
+        &__text{
+            width: 446px;
+            height: 60px;
+        }
+        &__button {
+            width: 152px;
+            height: 58px;
+            font: inherit;
+        }
+        &__bg{
+            &::after{
+                transform: translate(-346px, -163px);
+            }            
+        }
+    }        
 }
+
 @media (min-width: 1914px) {
     .menu {
         margin-right: 229px;        
     }    
     .logo{
         margin-right: 266px;
+    }
+    .main {
+        &__slogan {
+            width: 802px;
+            left: 1431px;
+            top: 208px;
+        }
+        &__bg {
+            &::after {
+                content: url(../img/man.png);                        
+                background: linear-gradient(115deg, rgba(255, 229, 245, 1) 29%, rgba(255, 254, 251, 1) 88%);
+                width: 1366px;
+                height: 1092px;
+                left: -308px;
+                top: -260px;
+                transform: none;                        
+            }
+        }
     }
 }
 
