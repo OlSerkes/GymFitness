@@ -32,7 +32,7 @@
     min-height: 118px;
     top: 0;
     z-index: 4; 
-    // background-image: url(../img/bg.png);    
+    background-image: url(../img/bg.png);    
     &__inner{
         display: flex;
         align-items: center; 
@@ -260,12 +260,12 @@
         background: linear-gradient(180deg, rgba(255, 242, 254, 0.2) 0%, rgba(255, 242, 254, 0.11) 100%);
         border-radius: 20px 20px 0px 0px;
         backdrop-filter: blur(500px);
-        margin-top: 240px;
-        padding: 100px 82px 77px 81px;
+        // margin-top: 240px;
+        // padding: 100px 82px 77px 81px;
     }
     &__block-content{
         display: flex; 
-        margin-bottom: 100px;             
+        //margin-bottom: 100px;             
     }
     &__block-title{
         width: 448px;
@@ -319,7 +319,7 @@
             }
     }
     &__block-item--title{        
-        margin-bottom: 50px;
+        //margin-bottom: 50px;
         margin-left: 120px;
     }
     &__block-item--text{
@@ -1062,15 +1062,60 @@
     .subtitle {
         font-size: 15px;
     }
+    .workout {
+        &__block {
+            margin-top: 45px;
+            padding: 40px 10px;
+        }
+        &__block-content { 
+            flex-direction: column; 
+            align-items: center;
+            gap: 10px;          
+            margin-bottom: 50px;
+        }
+        &__block-title {
+            width: auto;
+            margin-right: 0;
+        }
+        &__block-btn {
+            width: 140px;
+            height: 30px;
+            font-size: 10px;
+        }
+        &__block-items {
+            grid-template-columns: 1fr;
+        }
+        &__block-item {
+            padding: 19px 10px;            
+        }
+        &__block-item--title {
+            margin-bottom: 75px;
+            margin-left: 90px;
+        }
+        &__block-item--text {
+            
+            font-size: 13px;
+            line-height: 25px;
+                       
+            margin-bottom: 10px;
+        } 
+        &__block-slogan {
+            display: none;
+        }
+    } 
+    .link-wth-arrow {
+        font-size: 13px;
+        line-height: 25px;
+        &::after {
+            top: -3px;
+        }
+    }
 }
 
 @media (min-width: 480px) {
     .wrapper {        
         background-position: top left;
         background-size: auto;
-    }
-    .header {
-        background-image: url(../img/bg.png);
     }
     .logo {
         @include fonts(30px, 600, 36px);            
@@ -1090,6 +1135,12 @@
     }
     .open-btn {
         @include fonts(50px, 700, 50px);
+    }
+    .workout {
+        &__block-items {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
     }
 }
 

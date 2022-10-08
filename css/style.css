@@ -68,14 +68,14 @@ h4 {
   line-height: 82px; }
 
 h5 {
-  font-size: 48px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 60px; }
+  line-height: 30px; }
 
 h6 {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 29px; }
+  line-height: 20px; }
 
 a {
   color: #191718;
@@ -158,7 +158,8 @@ button {
   position: sticky;
   min-height: 118px;
   top: 0;
-  z-index: 4; }
+  z-index: 4;
+  background-image: url(../img/bg.png); }
   .header__inner {
     display: flex;
     align-items: center;
@@ -331,12 +332,9 @@ button {
 .workout__block {
   background: linear-gradient(180deg, rgba(255, 242, 254, 0.2) 0%, rgba(255, 242, 254, 0.11) 100%);
   border-radius: 20px 20px 0px 0px;
-  backdrop-filter: blur(500px);
-  margin-top: 240px;
-  padding: 100px 82px 77px 81px; }
+  backdrop-filter: blur(500px); }
 .workout__block-content {
-  display: flex;
-  margin-bottom: 100px; }
+  display: flex; }
 .workout__block-title {
   width: 448px;
   margin-right: 747px; }
@@ -407,7 +405,6 @@ button {
   top: 24px;
   left: 32px; }
 .workout__block-item--title {
-  margin-bottom: 50px;
   margin-left: 120px; }
 .workout__block-item--text {
   margin-bottom: 40px; }
@@ -1059,14 +1056,46 @@ button {
       font-size: 10px; }
 
   .subtitle {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .workout__block {
+    margin-top: 45px;
+    padding: 40px 10px; }
+  .workout__block-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px; }
+  .workout__block-title {
+    width: auto;
+    margin-right: 0; }
+  .workout__block-btn {
+    width: 140px;
+    height: 30px;
+    font-size: 10px; }
+  .workout__block-items {
+    grid-template-columns: 1fr; }
+  .workout__block-item {
+    padding: 19px 10px; }
+  .workout__block-item--title {
+    margin-bottom: 75px;
+    margin-left: 90px; }
+  .workout__block-item--text {
+    font-size: 13px;
+    line-height: 25px;
+    margin-bottom: 10px; }
+  .workout__block-slogan {
+    display: none; }
+
+  .link-wth-arrow {
+    font-size: 13px;
+    line-height: 25px; }
+    .link-wth-arrow::after {
+      top: -3px; } }
 @media (min-width: 480px) {
   .wrapper {
     background-position: top left;
     background-size: auto; }
-
-  .header {
-    background-image: url(../img/bg.png); }
 
   .logo {
     font-size: 30px;
@@ -1087,7 +1116,11 @@ button {
   .open-btn {
     font-size: 50px;
     font-weight: 700;
-    line-height: 50px; } }
+    line-height: 50px; }
+
+  .workout__block-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; } }
 @media (min-width: 600px) {
   .main__text {
     margin-bottom: 0; } }

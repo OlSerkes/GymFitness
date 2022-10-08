@@ -28,11 +28,13 @@ h4 {
 }
 
 h5 {
-    @include fonts(48px, 700, 60px);
+    // @include fonts(48px, 700, 60px);
+    @include fonts(20px, 700, 30px);
 }
 
 h6 {
-    @include fonts(24px, 500, 29px);
+    // @include fonts(24px, 500, 29px);
+    @include fonts(15px, 500, 20px);
 }
 
 a {
