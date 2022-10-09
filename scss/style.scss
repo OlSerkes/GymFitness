@@ -277,8 +277,8 @@
     }
     &__block-items{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 39px;
+        // grid-template-columns: repeat(4, 1fr);
+        // gap: 39px;
         margin-bottom: 51px;
     }
     &__block-item{
@@ -320,7 +320,7 @@
     }
     &__block-item--title{        
         //margin-bottom: 50px;
-        margin-left: 120px;
+        // margin-left: 120px;
     }
     &__block-item--text{
         margin-bottom: 40px;
@@ -1002,6 +1002,21 @@
 
 
 @media (min-width: 320px) {
+    body {
+            @include fonts(13px, 400, 25px);
+        }
+    
+        h3 {
+            @include fonts(30px, 600, 45px);
+        }
+    
+        h5 {
+            @include fonts(20px, 700, 30px);
+        }
+    
+        h6 {
+            @include fonts(15px, 500, 20px);
+        }
     #ourStory {
         padding-top: 45px;
         margin-top: -45px;
@@ -1089,23 +1104,22 @@
             padding: 19px 10px;            
         }
         &__block-item--title {
-            margin-bottom: 75px;
+            margin-bottom: 95px;
             margin-left: 90px;
-        }
-        &__block-item--text {
             
-            font-size: 13px;
-            line-height: 25px;
-                       
-            margin-bottom: 10px;
+        }
+        &__block-item--text {            
+            // font-size: 13px;
+            // line-height: 25px;                       
+            margin-bottom: 10px;            
         } 
         &__block-slogan {
             display: none;
         }
     } 
     .link-wth-arrow {
-        font-size: 13px;
-        line-height: 25px;
+        // font-size: 13px;
+        // line-height: 25px;        
         &::after {
             top: -3px;
         }
@@ -1152,6 +1166,15 @@
     }
 }
 @media (min-width: 768px) {
+    body {
+        @include fonts(18px, 400, 28px);
+    }
+    h5 {
+        @include fonts(30px, 700, 45px);
+    }
+    h6 {
+        @include fonts(20px, 500, 27px);
+    }
     .menu {
         &__list {
             display: flex;
@@ -1209,6 +1232,17 @@
     }
     .subtitle {
         font-size: 20px;
+    }
+    .workout {
+        &__block-items {
+            gap: 25px;
+        }
+        &__block-item--title {
+            margin-left: 120px;
+        }
+    }
+    .link-wth-arrow::after {
+        top: 0;
     }
 }
 
@@ -1274,7 +1308,35 @@
         &__info {
             width: calc(330px + (700 - 330) * ((100vw - 700px) / (1920 - 700)));
         }
-    }  
+    } 
+    .workout {
+        &__block {
+            margin-top: 140px;
+        }
+        &__block-content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__block-items {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &__block-item--title {
+            margin-left: 90px;
+        }
+        &__block-btn {
+            width: 150px;
+            height: 35px;
+            font-size: 12px;
+        }
+        &__block-slogan {
+            display: block;
+            margin-left: -5px;
+        }
+        &__block-slogan--title {
+            @include fonts(150px, 800, 100px);
+            letter-spacing: 0.130em;
+        }
+    } 
 }
 
 @media (min-width: 1200px) {
@@ -1285,11 +1347,42 @@
         }
         &__slogan {
             font-size: 92px;
+            top: -100px;
         } 
     }
+    .workout {
+        &__block {
+            margin-top: 200px;
+            padding: 100px 82px 77px 81px;
+        }
+        &__block-items {
+            gap: 39px;
+        }
+    }
 }
-
+@media (min-width: 1270px) {
+    .main {
+        &__slogan {
+            top: -145px;
+        }
+    }
+    .workout{
+        &__block {
+            margin-top: 240px;
+        }
+    }
+    
+}
 @media (min-width: 1430px) {
+    h3 {
+        @include fonts(96px, 700, 116px);
+    }
+    h5 {
+        @include fonts(48px, 700, 60px);
+    }
+    h6 {
+        @include fonts(24px, 500, 29px);
+    }
     .container {
         margin-right: 160px;
         margin-left: 160px;
@@ -1326,7 +1419,16 @@
         &__bg{
             &::after{
                 transform: translate(-346px, -163px);
-            }            
+                // width: calc(1100px + (1366 - 1100) * ((100vw - 1366px) / (1920 - 1366)));
+                // height: calc(1050px + (1092 - 1050) * ((100vw - 998px) / (1920 - 998)));
+                }
+            } 
+    }
+    .workout {
+        &__block-btn {
+            width: 237px;
+            height: 58px;
+            font-size: inherit;
         }
     }        
 }

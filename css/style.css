@@ -358,8 +358,6 @@ button {
     opacity: 0.4; }
 .workout__block-items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 39px;
   margin-bottom: 51px; }
 .workout__block-item {
   background: #FFFFFF;
@@ -404,8 +402,6 @@ button {
   width: 46px;
   top: 24px;
   left: 32px; }
-.workout__block-item--title {
-  margin-left: 120px; }
 .workout__block-item--text {
   margin-bottom: 40px; }
 .workout__block-slogan {
@@ -1000,6 +996,26 @@ button {
     gap: 60px; }
 
 @media (min-width: 320px) {
+  body {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px; }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px; }
+
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px; }
+
+  h6 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px; }
+
   #ourStory {
     padding-top: 45px;
     margin-top: -45px; }
@@ -1078,20 +1094,15 @@ button {
   .workout__block-item {
     padding: 19px 10px; }
   .workout__block-item--title {
-    margin-bottom: 75px;
+    margin-bottom: 95px;
     margin-left: 90px; }
   .workout__block-item--text {
-    font-size: 13px;
-    line-height: 25px;
     margin-bottom: 10px; }
   .workout__block-slogan {
     display: none; }
 
-  .link-wth-arrow {
-    font-size: 13px;
-    line-height: 25px; }
-    .link-wth-arrow::after {
-      top: -3px; } }
+  .link-wth-arrow::after {
+    top: -3px; } }
 @media (min-width: 480px) {
   .wrapper {
     background-position: top left;
@@ -1125,6 +1136,21 @@ button {
   .main__text {
     margin-bottom: 0; } }
 @media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; }
+
+  h5 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px; }
+
+  h6 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px; }
+
   .menu__list {
     display: flex;
     align-items: center;
@@ -1179,7 +1205,15 @@ button {
     margin-bottom: 50px; }
 
   .subtitle {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .workout__block-items {
+    gap: 25px; }
+  .workout__block-item--title {
+    margin-left: 120px; }
+
+  .link-wth-arrow::after {
+    top: 0; } }
 @media (min-width: 992px) {
   .wrapper {
     background-size: 50%; }
@@ -1235,14 +1269,64 @@ button {
   .main__inner {
     display: flex; }
   .main__info {
-    width: calc(330px + (700 - 330) * ((100vw - 700px) / (1920 - 700))); } }
+    width: calc(330px + (700 - 330) * ((100vw - 700px) / (1920 - 700))); }
+
+  .workout__block {
+    margin-top: 140px; }
+  .workout__block-content {
+    flex-direction: row;
+    justify-content: space-between; }
+  .workout__block-items {
+    grid-template-columns: repeat(4, 1fr); }
+  .workout__block-item--title {
+    margin-left: 90px; }
+  .workout__block-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 12px; }
+  .workout__block-slogan {
+    display: block;
+    margin-left: -5px; }
+  .workout__block-slogan--title {
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 100px;
+    letter-spacing: 0.130em; } }
 @media (min-width: 1200px) {
   .main__button {
     font-size: 12px;
     width: 125px; }
   .main__slogan {
-    font-size: 92px; } }
+    font-size: 92px;
+    top: -100px; }
+
+  .workout__block {
+    margin-top: 200px;
+    padding: 100px 82px 77px 81px; }
+  .workout__block-items {
+    gap: 39px; } }
+@media (min-width: 1270px) {
+  .main__slogan {
+    top: -145px; }
+
+  .workout__block {
+    margin-top: 240px; } }
 @media (min-width: 1430px) {
+  h3 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 116px; }
+
+  h5 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px; }
+
+  h6 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px; }
+
   .container {
     margin-right: 160px;
     margin-left: 160px; }
@@ -1277,7 +1361,12 @@ button {
       height: 58px;
       font: inherit; }
     .main__bg::after {
-      transform: translate(-346px, -163px); } }
+      transform: translate(-346px, -163px); }
+
+  .workout__block-btn {
+    width: 237px;
+    height: 58px;
+    font-size: inherit; } }
 @media (min-width: 1914px) {
   .menu {
     margin-right: 229px; }
