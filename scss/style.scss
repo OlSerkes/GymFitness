@@ -285,7 +285,7 @@
         background: #FFFFFF;
         box-shadow: 0px 50px 100px rgba(194, 183, 194, 0.3);
         border-radius: 20px;
-        padding: 51px 38px 30px 30px;
+        //padding: 51px 38px 30px 30px;
         position: relative;        
             &::before {
                 content: "";
@@ -322,15 +322,15 @@
         //margin-bottom: 50px;
         // margin-left: 120px;
     }
-    &__block-item--text{
-        margin-bottom: 40px;
-    }    
-    &__block-slogan{
-        margin-left: -90px;
-    }
+    // &__block-item--text{
+    //     margin-bottom: 40px;
+    // }    
+    // &__block-slogan{
+    //     margin-left: -90px;
+    // }
     &__block-slogan--title{
-        @include fonts(216px, 800, 261px);
-        letter-spacing: 0.145em;
+        // @include fonts(216px, 800, 261px);
+        // letter-spacing: 0.145em;
         background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFAFF 82.36%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1330,7 +1330,7 @@
         }
         &__block-slogan {
             display: block;
-            margin-left: -5px;
+            margin-left: 95px;
         }
         &__block-slogan--title {
             @include fonts(150px, 800, 100px);
@@ -1383,6 +1383,9 @@
     h6 {
         @include fonts(24px, 500, 29px);
     }
+    .wrapper {
+        background-size: 50% 65%;
+    }
     .container {
         margin-right: 160px;
         margin-left: 160px;
@@ -1418,9 +1421,9 @@
         }
         &__bg{
             &::after{
-                transform: translate(-346px, -163px);
-                // width: calc(1100px + (1366 - 1100) * ((100vw - 1366px) / (1920 - 1366)));
-                // height: calc(1050px + (1092 - 1050) * ((100vw - 998px) / (1920 - 998)));
+                transform: translate(-498px, -141px);
+                width: calc(1179px + (1366 - 1179) * ((100vw - 1366px) / (1920 - 1366)));
+                height: calc(1092px + (1092 - 1092) * ((100vw - 998px) / (1920 - 998)));
                 }
             } 
     }
@@ -1432,7 +1435,35 @@
         }
     }        
 }
-
+@media (min-width: 1740px) {
+    .workout {
+        &__block-item {
+            padding: 51px 38px 30px 30px;
+        }
+        &__block-item--text {
+            margin-bottom: 40px;
+        }
+        &__block-slogan {
+            margin-left: -90px;
+        }
+        &__block-slogan--title{
+            @include fonts(216px, 800, 261px);
+            letter-spacing: 0.145em;
+        }
+    }
+}
+@media (min-width: 1780px) {
+    .main {
+        &__slogan {
+            top: -260px;
+        }
+        &__bg {
+            &::after {
+                transform: translate(-421px, -262px);
+            }
+        }
+    }
+}
 @media (min-width: 1914px) {
     .menu {
         margin-right: 229px;        

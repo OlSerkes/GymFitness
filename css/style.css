@@ -363,7 +363,6 @@ button {
   background: #FFFFFF;
   box-shadow: 0px 50px 100px rgba(194, 183, 194, 0.3);
   border-radius: 20px;
-  padding: 51px 38px 30px 30px;
   position: relative; }
   .workout__block-item::before {
     content: "";
@@ -402,15 +401,7 @@ button {
   width: 46px;
   top: 24px;
   left: 32px; }
-.workout__block-item--text {
-  margin-bottom: 40px; }
-.workout__block-slogan {
-  margin-left: -90px; }
 .workout__block-slogan--title {
-  font-size: 216px;
-  font-weight: 800;
-  line-height: 261px;
-  letter-spacing: 0.145em;
   background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFAFF 82.36%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1286,7 +1277,7 @@ button {
     font-size: 12px; }
   .workout__block-slogan {
     display: block;
-    margin-left: -5px; }
+    margin-left: 95px; }
   .workout__block-slogan--title {
     font-size: 150px;
     font-weight: 800;
@@ -1327,6 +1318,9 @@ button {
     font-weight: 500;
     line-height: 29px; }
 
+  .wrapper {
+    background-size: 50% 65%; }
+
   .container {
     margin-right: 160px;
     margin-left: 160px; }
@@ -1361,12 +1355,31 @@ button {
       height: 58px;
       font: inherit; }
     .main__bg::after {
-      transform: translate(-346px, -163px); }
+      transform: translate(-498px, -141px);
+      width: calc(1179px + (1366 - 1179) * ((100vw - 1366px) / (1920 - 1366)));
+      height: calc(1092px + (1092 - 1092) * ((100vw - 998px) / (1920 - 998))); }
 
   .workout__block-btn {
     width: 237px;
     height: 58px;
     font-size: inherit; } }
+@media (min-width: 1740px) {
+  .workout__block-item {
+    padding: 51px 38px 30px 30px; }
+  .workout__block-item--text {
+    margin-bottom: 40px; }
+  .workout__block-slogan {
+    margin-left: -90px; }
+  .workout__block-slogan--title {
+    font-size: 216px;
+    font-weight: 800;
+    line-height: 261px;
+    letter-spacing: 0.145em; } }
+@media (min-width: 1780px) {
+  .main__slogan {
+    top: -260px; }
+  .main__bg::after {
+    transform: translate(-421px, -262px); } }
 @media (min-width: 1914px) {
   .menu {
     margin-right: 229px; }
