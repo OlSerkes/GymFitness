@@ -335,9 +335,6 @@ button {
   backdrop-filter: blur(500px); }
 .workout__block-content {
   display: flex; }
-.workout__block-title {
-  width: 448px;
-  margin-right: 747px; }
 .workout__block-btn {
   color: #FF48F7;
   box-sizing: border-box;
@@ -409,49 +406,15 @@ button {
 
 .results__block {
   position: relative; }
-  .results__block::before {
-    content: url(../img/bg-results-woman.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 886px;
-    height: 1124px;
-    left: 783.85px;
-    top: -181px;
-    z-index: 1; }
-  .results__block::after {
-    content: url(../img/bg-results-square.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    left: 997px;
-    top: -696px;
-    z-index: -1; }
 .results__block-box {
   position: relative; }
-  .results__block-box::before {
-    content: url(../img/bg-results-square-dark.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    left: 1359px;
-    top: -324px;
-    z-index: 2; }
 .results__block-inner {
   display: flex;
   margin-bottom: 60px; }
-.results__block-info {
-  margin-right: 549px; }
 .results__block-title {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 82px;
   width: 721px;
-  height: 164px;
   margin-top: 15px;
   margin-bottom: 30px; }
-.results__block-text {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 30px;
-  width: 568px; }
 .results__block-trainer {
   width: 330px;
   height: 110px;
@@ -460,7 +423,6 @@ button {
   border-radius: 20px;
   position: relative;
   padding: 7px 27px 7px 20px;
-  left: 90px;
   z-index: 3; }
   .results__block-trainer::before {
     content: "";
@@ -486,20 +448,15 @@ button {
   padding-left: 115px; }
 .results__block-grid {
   display: grid;
-  grid-template: 58px 122px/568px 342px;
   gap: 80px; }
 .results__block-grid--adverts {
   grid-column: 1/2;
   display: flex; }
-.results__block-grid--adv {
-  margin-right: 40px; }
 .results__block-grid--adv-img {
   margin-bottom: 22px; }
 .results__block-grid--adv-rating {
   margin-top: 12px; }
 .results__block-grid--userpics {
-  grid-row: 1/3;
-  grid-column: 2/3;
   background: linear-gradient(149.51deg, rgba(255, 255, 243, 0.9) 0%, #fff2fe 100%);
   backdrop-filter: blur(500px);
   border-radius: 20px;
@@ -997,6 +954,11 @@ button {
     font-weight: 600;
     line-height: 45px; }
 
+  h4 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 40px; }
+
   h5 {
     font-size: 20px;
     font-weight: 700;
@@ -1037,6 +999,16 @@ button {
       width: 25px;
       height: 25px; }
 
+  .button {
+    width: 115px;
+    height: 30px;
+    font-size: 10px; }
+
+  .play {
+    height: 30px; }
+    .play::before {
+      top: 2px; }
+
   .open-btn {
     font-size: 35px;
     font-weight: 700;
@@ -1056,14 +1028,15 @@ button {
       display: none; }
     .main__text {
       font-size: 13px;
-      line-height: 25px; }
+      line-height: 25px;
+      margin-bottom: 25px; }
     .main__button {
       width: 90px;
       height: 30px;
       font-size: 10px; }
 
   .subtitle {
-    font-size: 15px; }
+    font-size: 14px; }
 
   .workout__block {
     margin-top: 45px;
@@ -1081,7 +1054,8 @@ button {
     height: 30px;
     font-size: 10px; }
   .workout__block-items {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    gap: 5px; }
   .workout__block-item {
     padding: 19px 10px; }
   .workout__block-item--title {
@@ -1093,7 +1067,34 @@ button {
     display: none; }
 
   .link-wth-arrow::after {
-    top: -3px; } }
+    top: -3px; }
+
+  .results__block-inner {
+    flex-direction: column; }
+  .results__block-title {
+    width: auto; }
+  .results__block-trainer {
+    width: auto;
+    padding: 7px; }
+  .results__block-trainer--title {
+    font-size: 8px; }
+  .results__block-text {
+    margin-bottom: 25px; }
+  .results__block-trainer--item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px; }
+  .results__block-grid {
+    gap: 25px; }
+  .results__block-grid--adverts {
+    flex-direction: column;
+    align-items: center; }
+  .results__block-grid--adv {
+    margin-bottom: 25px; }
+  .results__block-grid--adv-img {
+    margin-bottom: 5px; }
+  .results__block-slogan {
+    display: none; } }
 @media (min-width: 480px) {
   .wrapper {
     background-position: top left;
