@@ -390,8 +390,8 @@
     //     width: 568px;        
     // }
     &__block-trainer{
-        width: 330px;
-        height: 110px;
+        // width: 330px;
+        // height: 110px;
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(50px);
         border-radius: 20px;
@@ -445,12 +445,12 @@
         background: linear-gradient(149.51deg, rgba(255, 255, 243, 0.9) 0%, rgba(255, 242, 254, 1) 100%);
         backdrop-filter: blur(500px);
         border-radius: 20px;
-        padding: 30px;
+        //padding: 30px;
         position: relative;
         z-index: 3;
     }
     &__block-grid--userpics-num{
-        @include fonts(36px, 600, 30px);
+        // @include fonts(36px, 600, 30px);
         color: $span;
         margin-bottom: 16px;
     }
@@ -465,11 +465,11 @@
         width: 66px;
         height: 66px;
         position: absolute;
-        top: 152px;
+        //top: 152px;
         left: 190px;
         box-shadow: 0px 0px 20px rgba(255, 28, 255, 0.3);
         border-radius: 50%;
-        display: flex;
+        //display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -1163,15 +1163,33 @@
         &__block-grid {
             gap: 25px;
         }
+        &__block-grid--btns {
+            justify-content: center;
+        }
         &__block-grid--adverts{
             flex-direction: column;
             align-items: center;
         }
         &__block-grid--adv {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         &__block-grid--adv-img {
             margin-bottom: 5px;
+        }
+        &__block-grid--userpics {
+            padding: 20px;
+        }
+        &__block-grid--userpics-num {
+            @include fonts(20px, 600, 15px);
+        }
+        &__block-grid--userpics-text {
+            margin-bottom: 15px;
+        }
+        &__block-grid--userpic-img{
+            display: none;
+        }
+        &__block-grid--userpic-p {
+            display: none;
         }
         &__block-slogan {
             display: none;
@@ -1209,6 +1227,32 @@
                 gap: 15px;
             }
     }
+    .results {
+        &__block-grid--btns {
+            justify-content: start;
+        }
+        &__block-grid--adverts {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__block-grid--userpics {
+            padding: 30px;
+            max-width: 342px;
+            // grid-row: 1/3;
+            // grid-column: 2/3;
+        }
+        &__block-grid--userpics-num {
+            font-size: 36px;
+            line-height: 30px;
+        }
+        &__block-grid--userpic-img {
+            display: inline-block;
+        }
+        &__block-grid--userpic-p {
+            display: flex;
+            top: 133px;
+        }
+    }
 }
 
 @media (min-width: 600px) {
@@ -1217,10 +1261,43 @@
             margin-bottom: 0;
         }
     }
+    .results {
+        &__block-inner {
+            flex-direction: row;
+        }
+        &__block-info {
+            margin-right: 30px;
+        }
+        &__block-trainer {           
+            min-width: 175px;
+            max-height: 110px;            
+            &::before{
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+            }            
+        }
+        &__block-trainer--title {            
+            padding-top: 13px;
+            padding-left: 65px;
+        }
+        &__block-trainer--item {
+            padding-left: 65px;
+        }
+        &__block-grid--adverts{
+            justify-content: start;
+        }
+        &__block-grid--adv {
+            margin-right: 30px;
+        }
+    }
 }
 @media (min-width: 768px) {
     body {
         @include fonts(18px, 400, 28px);
+    }
+    h4 {
+        @include fonts(45px, 700, 55px);
     }
     h5 {
         @include fonts(30px, 700, 45px);
@@ -1274,6 +1351,12 @@
         width: 100px;
         height: 35px;
     }
+    .play {
+        height: 35px;
+        &::before {
+            top: 4px;
+        }
+    }
     .main {
         &__title {
             @include fonts(55px, 700, 65px);
@@ -1296,6 +1379,33 @@
     }
     .link-wth-arrow::after {
         top: 0;
+    }
+    .results {
+        &__block-trainer{
+            &::before {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        &__block-trainer--title {
+            font-size: 10px;
+        }
+        &__block-grid {
+            grid-template: 58px 122px/auto 290px;
+        }
+        &__block-grid--adv {
+            margin-right: 15px;
+        }
+        &__block-grid--userpics {
+            grid-row: 1/3;
+            grid-column: 2/3;            
+            padding: 15px;
+        }
+        &__block-grid--userpic-p {
+            top: 122px;
+            left: 179px;
+        }
+        
     }
 }
 
