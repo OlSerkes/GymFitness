@@ -396,7 +396,7 @@
         backdrop-filter: blur(50px);
         border-radius: 20px;
         position: relative;
-        padding: 7px 27px 7px 20px;
+        //padding: 7px 27px 7px 20px;
         //left: 90px;
         z-index: 3;
         &::before{
@@ -404,30 +404,30 @@
             position: absolute;
             background-image: url(../img/avatar-trainer.jpg);
             background-repeat: no-repeat;
-            background-size: auto 96px;
-            width: 96px;
-            height: 96px;
+            // background-size: auto 96px;
+            // width: 96px;
+            // height: 96px;
             border-radius: 50%;
-            top: 16px;
+            //top: 16px;
         }
     }
     &__block-trainer--title{
-        @include fonts(14px, 400, 30px);
+        //@include fonts(14px, 400, 30px);
         text-transform: uppercase;
-        padding-top: 23px;
-        padding-left: 115px;
+        // padding-top: 23px;
+        // padding-left: 115px;
     }
-    &__block-trainer--item{
-        @include fonts(30px, 600, 30px);
-        padding-left: 115px;
-    }
+    // &__block-trainer--item{
+    //     @include fonts(30px, 600, 30px);
+    //     padding-left: 115px;
+    // }
     &__block-grid{
         display: grid;
         //grid-template: 58px 122px/568px 342px;
-        gap: 80px;
+        //gap: 80px;
     }
     &__block-grid--adverts{
-        grid-column: 1/2;
+        //grid-column: 1/2;
         display: flex;        
     }
     // &__block-grid--adv{
@@ -497,7 +497,7 @@
             width: 32px;
             height: 32px;
             position: absolute;
-            top: 16px;
+            //top: 16px;
             left: 32px;            
         }
         &:hover::before{
@@ -1264,6 +1264,7 @@
     .results {
         &__block-inner {
             flex-direction: row;
+            justify-content: space-between;
         }
         &__block-info {
             margin-right: 30px;
@@ -1493,13 +1494,18 @@
         }
         &__block-slogan {
             display: block;
-            margin-left: 95px;
+            margin-left: -18px;
         }
         &__block-slogan--title {
             @include fonts(150px, 800, 100px);
             letter-spacing: 0.130em;
         }
     } 
+    .results {
+        &__block-info {
+            max-width: 721px;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1522,6 +1528,30 @@
             gap: 39px;
         }
     }
+    .results {
+        &__block-trainer {
+                width: 330px;
+                height: 110px;                
+                padding: 7px 27px 7px 20px;
+                //left: 90px;
+                &::before {                    
+                    background-size: auto 96px;
+                    width: 96px;
+                    height: 96px;                    
+                    top: 16px;
+                }
+            }
+            &__block-trainer--title {
+                font-size: 14px;
+                line-height: 30px;              
+                padding-top: 23px;
+                padding-left: 115px;
+            }
+            &__block-trainer--item {
+                @include fonts(30px, 600, 30px);
+                padding-left: 115px;
+            }
+    }
 }
 @media (min-width: 1270px) {
     .main {
@@ -1540,6 +1570,9 @@
     h3 {
         @include fonts(96px, 700, 116px);
     }
+    h4 {
+        @include fonts(64px, 700, 82px);
+    }
     h5 {
         @include fonts(48px, 700, 60px);
     }
@@ -1556,6 +1589,9 @@
     .button {
         @include fonts(18px, 500, 22px);
         width: 237px;
+        height: 58px;
+    }
+    .play {
         height: 58px;
     }
     .menu {
@@ -1596,7 +1632,47 @@
             height: 58px;
             font-size: inherit;
         }
-    }        
+    } 
+    .results {
+        // &__block {
+        //     &::before {
+        //         //content: url(../img/bg-results-woman.png);
+        //         content: "";
+        //         background-image: url(../img/bg-results-woman.png);
+        //         position: absolute;
+        //         background-repeat: no-repeat;
+        //         background-size: cover;
+        //         width: calc(400px + (946 - 400) * ((100vw - 400px) / (1920 - 400)));
+        //         height: calc(407px + (962 - 407) * ((100vw - 407px) / (1920 - 407)));
+        //         left: 573.85px;
+        //         top: -123px;
+        //         z-index: 1;
+        //     }            
+        //     &::after {
+        //         content: url(../img/bg-results-square.png);
+        //         position: absolute;
+        //         background-repeat: no-repeat;
+        //         left: 997px;
+        //         top: -696px;
+        //         z-index: -1;
+        //     }
+        // }
+       &__block-grid {
+            grid-template: 58px 122px/auto 342px;
+       }
+       &__block-grid--btn-play{
+        &::before {
+            top: 16px;
+        }
+       }
+       &__block-grid--userpics {
+            padding: 30px;
+       }
+       &__block-grid--userpic-p {
+        top: 133px;
+        left: 190px;
+       }
+    }       
 }
 @media (min-width: 1740px) {
     .workout {
@@ -1612,6 +1688,41 @@
         &__block-slogan--title{
             @include fonts(216px, 800, 261px);
             letter-spacing: 0.145em;
+        }
+    }
+    .results {
+        &__block {
+            &::before {
+                    //content: url(../img/bg-results-woman.png);
+                content: "";
+                background-image: url(../img/bg-results-woman.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: calc(400px + (946 - 400) * ((100vw - 400px) / (1920 - 400)));
+                height: calc(407px + (962 - 407) * ((100vw - 407px) / (1920 - 407)));
+                left: 699px;
+                top: -144px;
+                z-index: 1;
+            }            
+            &::after {
+                content: url(../img/bg-results-square.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                left: 817px;
+                top: -696px;
+                z-index: -1;
+            }
+        }
+        &__block-info {
+            margin-right: 369px;
+        }
+        &__block-trainer {
+            left: 90px;
+        }
+        &__block-grid {
+            grid-template: 58px 122px/568px 342px;
+            gap: 80px;
         }
     }
 }
