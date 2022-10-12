@@ -543,10 +543,7 @@ button {
   display: flex;
   margin-bottom: 220px; }
 .clubMaster__block-items {
-  display: grid;
-  grid-template-columns: repeat(2, 366px);
-  grid-template-rows: repeat(2, 332px);
-  gap: 50px; }
+  display: grid; }
 .clubMaster__block-item {
   padding: 46px 30px 30px 30px;
   border-radius: 20px;
@@ -558,16 +555,13 @@ button {
     height: 90px;
     border-radius: 50%;
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
-    top: 35px; }
+    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15); }
   .clubMaster__block-item::after {
     position: absolute;
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
-    color: #FF48F7;
-    top: 55px;
-    left: 49px; }
+    color: #FF48F7; }
 .clubMaster__block-item--title {
   margin-left: 120px;
   margin-bottom: 44px; }
@@ -589,8 +583,6 @@ button {
   background: #FFF4F4; }
   .clubMaster__block-item04::after {
     content: "04"; }
-.clubMaster__block-content {
-  margin-left: 171px; }
 .clubMaster__block-content-box {
   margin-bottom: 60px; }
 .clubMaster__block-content-box--text {
@@ -1030,8 +1022,10 @@ button {
   .block__slogan {
     display: none; }
 
-  .link-wth-arrow::after {
-    top: -3px; }
+  .link-wth-arrow {
+    font-size: 15px; }
+    .link-wth-arrow::after {
+      top: -3px; }
 
   .results__block-inner {
     flex-direction: column; }
@@ -1040,14 +1034,20 @@ button {
   .results__block-trainer {
     width: auto;
     padding: 7px; }
+    .results__block-trainer::before {
+      background-size: cover;
+      width: 50px;
+      height: 50px; }
   .results__block-trainer--title {
-    font-size: 8px; }
+    font-size: 8px;
+    padding-left: 73px; }
   .results__block-text {
     margin-bottom: 25px; }
   .results__block-trainer--item {
     font-size: 20px;
     font-weight: 500;
-    line-height: 22px; }
+    line-height: 22px;
+    padding-left: 73px; }
   .results__block-grid {
     gap: 25px; }
   .results__block-grid--btns {
@@ -1070,6 +1070,32 @@ button {
   .results__block-grid--userpic-img {
     display: none; }
   .results__block-grid--userpic-p {
+    display: none; }
+
+  .clubMaster__block {
+    flex-direction: column-reverse; }
+  .clubMaster__block-items {
+    grid-template-columns: 1fr;
+    gap: 5px; }
+  .clubMaster__block-item {
+    padding: 8px 10px; }
+    .clubMaster__block-item::before {
+      top: 8px; }
+    .clubMaster__block-item::after {
+      top: 30px;
+      left: 30px; }
+  .clubMaster__block-item--title {
+    margin-left: 107px;
+    margin-bottom: 65px; }
+  .clubMaster__block-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .clubMaster__block-btn {
+    margin-bottom: 25px; }
+  .clubMaster__link-wth-arrow::after {
+    top: 3px; }
+  .clubMaster__block-content--items {
     display: none; } }
 @media (min-width: 480px) {
   .wrapper {
@@ -1129,10 +1155,6 @@ button {
   .results__block-trainer {
     min-width: 175px;
     max-height: 110px; }
-    .results__block-trainer::before {
-      background-size: cover;
-      width: 50px;
-      height: 50px; }
   .results__block-trainer--title {
     padding-top: 13px;
     padding-left: 65px; }

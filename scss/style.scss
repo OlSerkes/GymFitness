@@ -595,9 +595,9 @@
     }
     &__block-items{
         display: grid;
-        grid-template-columns: repeat(2, 366px);
-        grid-template-rows: repeat(2, 332px);
-        gap: 50px;        
+        // grid-template-columns: repeat(2, 366px);
+        // grid-template-rows: repeat(2, 332px);
+        // gap: 50px;        
     }
     &__block-item{
         padding: 46px 30px 30px 30px;        
@@ -611,14 +611,14 @@
             border-radius: 50%;
             background-color: $colorText;
             box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
-            top: 35px;
+            //top: 35px;
         }
         &::after{
             position: absolute;
             @include fonts(40px, 700, 48px);
             color: $span;
-            top: 55px;
-            left: 49px;
+            // top: 55px;
+            // left: 49px;
         }
     }
     &__block-item--title{
@@ -652,9 +652,9 @@
             content: "04";
         }
     }
-    &__block-content{
-        margin-left: 171px;
-    }
+    // &__block-content{
+    //     margin-left: 171px;
+    // }
     &__block-content-box{
         margin-bottom: 60px;
     }
@@ -1149,7 +1149,7 @@
         }
     }
     .link-wth-arrow {
-        // font-size: 13px;
+        font-size: 15px;
         // line-height: 25px;        
         &::after {
             top: -3px;
@@ -1165,15 +1165,22 @@
         &__block-trainer {
             width: auto;            
             padding: 7px;
+            &::before {
+                    background-size: cover;
+                    width: 50px;
+                    height: 50px;
+                }
         }
         &__block-trainer--title {
             font-size: 8px;
+            padding-left: 73px;
         }
         &__block-text {
             margin-bottom: 25px;
         }
         &__block-trainer--item {
             @include fonts(20px, 500, 22px);
+            padding-left: 73px;
         }
         &__block-grid {
             gap: 25px;
@@ -1209,6 +1216,45 @@
         // &__block-slogan {
         //     display: none;
         // }
+    }
+    .clubMaster {
+        &__block {
+            flex-direction: column-reverse;            
+        }
+        &__block-items {
+            grid-template-columns: 1fr;
+            gap: 5px;
+        }
+        &__block-item {
+            padding: 8px 10px;
+            &::before {
+                top: 8px;
+            }
+            &::after {
+                top: 30px;
+                left: 30px;
+            }
+        }
+        &__block-item--title {
+            margin-left: 107px;
+            margin-bottom: 65px;
+        }        
+        &__block-btns {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__block-btn {
+            margin-bottom: 25px;
+        }
+        &__link-wth-arrow {
+            &::after {
+                top: 3px;
+            }
+        }
+        &__block-content--items{
+            display: none;
+        }
     }
 }
 
@@ -1287,11 +1333,11 @@
         &__block-trainer {           
             min-width: 175px;
             max-height: 110px;            
-            &::before{
-                background-size: cover;
-                width: 50px;
-                height: 50px;
-            }            
+            // &::before{
+            //     background-size: cover;
+            //     width: 50px;
+            //     height: 50px;
+            // }            
         }
         &__block-trainer--title {            
             padding-top: 13px;
