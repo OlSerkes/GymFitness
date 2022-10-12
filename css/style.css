@@ -398,7 +398,8 @@ button {
   width: 46px;
   top: 24px;
   left: 32px; }
-.workout__block-slogan--title {
+
+.block__slogan-title {
   background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFAFF 82.36%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -488,18 +489,6 @@ button {
     left: 32px; }
   .results__block-grid--btn-play:hover::before {
     background-image: url(../img/play-arrow-hover.svg); }
-.results__block-slogan {
-  margin-top: 58px;
-  margin-bottom: 13px; }
-.results__block-slogan--title {
-  font-size: 180px;
-  font-weight: 800;
-  line-height: 218px;
-  letter-spacing: 0.145em;
-  background: linear-gradient(90deg, #FFF1FE 1.21%, #FFFFFF 82.36%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; }
 
 .play {
   width: 79px;
@@ -1037,7 +1026,8 @@ button {
     margin-left: 90px; }
   .workout__block-item--text {
     margin-bottom: 10px; }
-  .workout__block-slogan {
+
+  .block__slogan {
     display: none; }
 
   .link-wth-arrow::after {
@@ -1080,8 +1070,6 @@ button {
   .results__block-grid--userpic-img {
     display: none; }
   .results__block-grid--userpic-p {
-    display: none; }
-  .results__block-slogan {
     display: none; } }
 @media (min-width: 480px) {
   .wrapper {
@@ -1296,7 +1284,8 @@ button {
     display: block;
     width: 100%;
     transform: rotate(-90deg);
-    left: calc(46% - 10px);
+    margin-right: calc(-46% + 8px);
+    right: 0;
     top: -88px;
     font-size: 80px;
     line-height: 0; }
@@ -1330,17 +1319,24 @@ button {
     width: 150px;
     height: 35px;
     font-size: 12px; }
-  .workout__block-slogan {
+
+  .block__slogan {
     display: block;
+    position: relative;
+    left: 0;
     margin-left: -18px; }
-  .workout__block-slogan--title {
+  .block__slogan-title {
     font-size: 150px;
     font-weight: 800;
-    line-height: 100px;
+    line-height: 113px;
     letter-spacing: 0.130em; }
+  .block__slogan-result {
+    margin: 58px 0 13px 2px; }
 
   .results__block-info {
-    max-width: 721px; } }
+    max-width: 721px; }
+  .results__block-slogan {
+    display: block; } }
 @media (min-width: 1200px) {
   .main__button {
     font-size: 12px;
@@ -1354,6 +1350,11 @@ button {
     padding: 100px 82px 77px 81px; }
   .workout__block-items {
     gap: 39px; }
+
+  .block__slogan {
+    margin-left: -89px; }
+  .block__slogan-result {
+    margin-left: -6px; }
 
   .results__block-trainer {
     width: 330px;
@@ -1428,7 +1429,7 @@ button {
       font-weight: 800;
       line-height: 173px;
       top: -172px;
-      left: calc(44% - 1px); }
+      margin-right: calc(-44% + 8px); }
     .main__title {
       font-size: 96px;
       font-weight: 700;
@@ -1464,9 +1465,8 @@ button {
     padding: 51px 38px 30px 30px; }
   .workout__block-item--text {
     margin-bottom: 40px; }
-  .workout__block-slogan {
-    margin-left: -90px; }
-  .workout__block-slogan--title {
+
+  .block__slogan-title {
     font-size: 216px;
     font-weight: 800;
     line-height: 261px;
@@ -1480,16 +1480,30 @@ button {
     background-size: cover;
     width: calc(400px + (946 - 400) * ((100vw - 400px) / (1920 - 400)));
     height: calc(407px + (962 - 407) * ((100vw - 407px) / (1920 - 407)));
-    left: 699px;
-    top: -144px;
+    right: 0;
+    margin: -160px;
+    top: 28px;
     z-index: 1; }
   .results__block::after {
-    content: url(../img/bg-results-square.png);
+    content: "";
+    background-image: url(../img/bg-results-square.png);
     position: absolute;
     background-repeat: no-repeat;
-    left: 817px;
+    background-size: cover;
+    width: calc(500px + (763 - 500) * ((100vw - 500px) / (1920 - 500)));
+    height: calc(1360px + (2073 - 1360) * ((100vw - 1360px) / (1920 - 1360)));
+    right: 0;
+    margin-right: -160px;
     top: -696px;
     z-index: -1; }
+  .results__block-box::before {
+    content: url(../img/bg-results-square-dark.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 0;
+    margin-right: -160px;
+    top: -324px;
+    z-index: 2; }
   .results__block-info {
     margin-right: 369px; }
   .results__block-trainer {
@@ -1513,6 +1527,15 @@ button {
     width: 802px;
     left: 1431px;
     top: 208px; }
+  .main__info::before {
+    content: url(../img/wave.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 1920px;
+    height: 415px;
+    left: -199.53px;
+    top: 83px;
+    transform: rotate(-1.73deg); }
   .main__bg::after {
     content: url(../img/man.png);
     background: linear-gradient(115deg, #ffe5f5 29%, #fffefb 88%);
