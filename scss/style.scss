@@ -603,55 +603,59 @@
         padding: 46px 30px 30px 30px;        
         border-radius: 20px;
         position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background-color: $colorText;
-            box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
-            //top: 35px;
-        }
-        &::after{
-            position: absolute;
-            @include fonts(40px, 700, 48px);
-            color: $span;
-            // top: 55px;
-            // left: 49px;
-        }
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     width: 90px;
+        //     height: 90px;
+        //     border-radius: 50%;
+        //     background-color: $colorText;
+        //     box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
+        //     //top: 35px;
+        // }
+        // &::after{
+        //     position: absolute;
+        //     @include fonts(40px, 700, 48px);
+        //     color: $span;
+        //     // top: 55px;
+        //     // left: 49px;
+        // }
     }
     &__block-item--title{
-        margin-left: 120px;
-        margin-bottom: 44px;
+        display: inline-block;
+        margin-left: 20px;
+        //margin-bottom: 44px;
+        vertical-align: middle;
+        max-width: calc(100% - 50px - 2em);
     }
     &__block-item--text{
-        margin-bottom: 40px;
+        margin: 40px 0;
     }    
     &__block-item01{
         background: #F6F4FF;
-        &::after{
-            content: "01";            
-        }
+        // &::after{
+        //     content: "01";            
+        // }
     }
     &__block-item02{
         background: #F4F7FF;
-        &::after {
-            content: "02";
-        }
+        // &::after {
+        //     content: "02";
+        // }
     }
-    &__block-item03{
+    &__block-item03,
+    &__block-item04 {
         background: #FFF4FF;
-        &::after {
-            content: "03";
-        }
+        // &::after {
+        //     content: "03";
+        // }
     }
-    &__block-item04{
-        background: #FFF4F4;
-        &::after {
-            content: "04";
-        }
-    }
+    // &__block-item04{
+    //     background: #FFF4F4;
+    //     // &::after {
+    //     //     content: "04";
+    //     // }
+    // }
     // &__block-content{
     //     margin-left: 171px;
     // }
@@ -668,10 +672,10 @@
         margin-right: 30px;
     }    
     &__block-content--items{
-        display: grid;
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(1, 128px);
-        gap: 23px;        
+        //display: grid;
+        // grid-template-columns: repeat(3, 200px);
+        // grid-template-rows: repeat(1, 128px);
+        // gap: 23px;        
     }
     &__block-content--item{
         display: flex;
@@ -704,6 +708,22 @@
     }
 }
 
+.circle-wrap {
+    display: inline-block;
+}
+.circle {
+    @include fonts(20px, 700, 24px);
+    background: $colorText;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $span;
+    height: 50px;
+    position: relative;
+    width: 50px;
+}
 .client{
     &__block{
         position: relative;
@@ -1224,20 +1244,21 @@
         &__block-items {
             grid-template-columns: 1fr;
             gap: 5px;
-        }
+        }        
         &__block-item {
             padding: 8px 10px;
-            &::before {
-                top: 8px;
-            }
-            &::after {
-                top: 30px;
-                left: 30px;
-            }
+            // &::before {
+            //     top: 8px;
+            // }
+            // &::after {
+            //     top: 30px;
+            //     left: 30px;
+            // }
         }
+                
         &__block-item--title {
-            margin-left: 107px;
-            margin-bottom: 65px;
+            //margin-left: 107px;
+            //margin-bottom: 65px;
         }        
         &__block-btns {
             display: flex;
@@ -1247,7 +1268,7 @@
         &__block-btn {
             margin-bottom: 25px;
         }
-        &__link-wth-arrow {
+        &__link-wth-arrow {            
             &::after {
                 top: 3px;
             }
@@ -1256,6 +1277,9 @@
             display: none;
         }
     }
+    
+    
+    
 }
 
 @media (min-width: 480px) {
@@ -1288,6 +1312,9 @@
                 gap: 15px;
             }
     }
+    .link-wth-arrow {
+        font-size: 12px;
+    }
     .results {
         &__block-grid--btns {
             justify-content: start;
@@ -1313,6 +1340,57 @@
             display: flex;
             top: 133px;
         }
+    }
+    .clubMaster {
+
+        &__block-content--items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        &__block-content--item-title {
+            font-size: 30px;            
+            line-height: 40px;
+        }
+        &__block-content--item-text {
+            text-align: center;
+        }
+        &__block-items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        // &__block-item {
+        //     &::before {
+        //         width: 50px;
+        //         height: 50px;
+        //     }
+        // }
+        &__block-item--circle {
+            &::before {
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: $colorText;
+                    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
+                    //top: 35px;
+                }
+            
+                &::after {
+                    position: absolute;
+                    @include fonts(40px, 700, 48px);
+                    color: $span;
+                    // top: 55px;
+                    // left: 49px;
+                }
+        }
+        
+        &__block-btns {
+            flex-direction: row;
+            margin-bottom: 40px;
+        }
+        
     }
 }
 
@@ -1439,8 +1517,11 @@
             margin-left: 120px;
         }
     }
-    .link-wth-arrow::after {
-        top: 0;
+    .link-wth-arrow {
+        font-size: 18px;
+        &::after {
+                top: 0;
+            }
     }
     .results {
         &__block-trainer{
@@ -1466,6 +1547,20 @@
         &__block-grid--userpic-p {
             top: 122px;
             left: 179px;
+        }
+        
+    }
+    .circle {
+        width: 90px;
+        height: 90px;
+        &__item {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+    .clubMaster {
+        &__block-item--title {
+            max-width: calc(100% - 90px - 2em);
         }
         
     }
@@ -1573,7 +1668,7 @@
             margin-left: -18px;
         }        
         &__slogan-title {
-            @include fonts(150px, 800, 113px);
+            @include fonts(150px, 800, 200px);
             letter-spacing: 0.130em;
         }
         &__slogan-result {
@@ -1586,6 +1681,12 @@
         }
         &__block-slogan {
             display: block;
+        }
+    }
+    .clubMaster{
+        &__block-content--item-title {
+            font-size: 48px;
+            line-height: 58px;
         }
     }
 }
@@ -1645,6 +1746,16 @@
                 padding-left: 115px;
             }
     }
+        .clubMaster {
+            &__block {
+                flex-direction: row;
+            }    
+            &__block-items {
+                margin-right: 2em;
+                gap: 1.5em;
+            }    
+            &__block-content {}
+        }
 }
 @media (min-width: 1270px) {
     .main {
@@ -1657,7 +1768,16 @@
             margin-top: 240px;
         }
     }
-    
+    .clubMaster{
+        &__block-items {
+            margin-right: 3em;
+        }
+        &__link-wth-arrow {
+            &::after {
+                top: 3px;
+            }
+        }
+    }   
 }
 @media (min-width: 1430px) {
     h3 {
@@ -1765,7 +1885,15 @@
         top: 133px;
         left: 190px;
        }
-    }       
+    } 
+    .clubMaster {
+        &__block-btns {
+            align-items: center;
+        }
+        &__block-btn {
+            margin-bottom: 0px;
+        }
+    }
 }
 @media (min-width: 1740px) {
     .workout {
@@ -1841,6 +1969,7 @@
             gap: 80px;
         }
     }
+    
 }
 @media (min-width: 1780px) {
     .main {

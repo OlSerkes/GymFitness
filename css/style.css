@@ -548,41 +548,19 @@ button {
   padding: 46px 30px 30px 30px;
   border-radius: 20px;
   position: relative; }
-  .clubMaster__block-item::before {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15); }
-  .clubMaster__block-item::after {
-    position: absolute;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    color: #FF48F7; }
 .clubMaster__block-item--title {
-  margin-left: 120px;
-  margin-bottom: 44px; }
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+  max-width: calc(100% - 50px - 2em); }
 .clubMaster__block-item--text {
-  margin-bottom: 40px; }
+  margin: 40px 0; }
 .clubMaster__block-item01 {
   background: #F6F4FF; }
-  .clubMaster__block-item01::after {
-    content: "01"; }
 .clubMaster__block-item02 {
   background: #F4F7FF; }
-  .clubMaster__block-item02::after {
-    content: "02"; }
-.clubMaster__block-item03 {
+.clubMaster__block-item03, .clubMaster__block-item04 {
   background: #FFF4FF; }
-  .clubMaster__block-item03::after {
-    content: "03"; }
-.clubMaster__block-item04 {
-  background: #FFF4F4; }
-  .clubMaster__block-item04::after {
-    content: "04"; }
 .clubMaster__block-content-box {
   margin-bottom: 60px; }
 .clubMaster__block-content-box--text {
@@ -591,11 +569,6 @@ button {
   margin-bottom: 80px; }
 .clubMaster__block-btn {
   margin-right: 30px; }
-.clubMaster__block-content--items {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(1, 128px);
-  gap: 23px; }
 .clubMaster__block-content--item {
   display: flex;
   align-items: center;
@@ -624,6 +597,24 @@ button {
   font-size: 48px;
   font-weight: 400;
   line-height: 58px; }
+
+.circle-wrap {
+  display: inline-block; }
+
+.circle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF48F7;
+  height: 50px;
+  position: relative;
+  width: 50px; }
 
 .client__block {
   position: relative; }
@@ -1079,14 +1070,6 @@ button {
     gap: 5px; }
   .clubMaster__block-item {
     padding: 8px 10px; }
-    .clubMaster__block-item::before {
-      top: 8px; }
-    .clubMaster__block-item::after {
-      top: 30px;
-      left: 30px; }
-  .clubMaster__block-item--title {
-    margin-left: 107px;
-    margin-bottom: 65px; }
   .clubMaster__block-btns {
     display: flex;
     flex-direction: column;
@@ -1127,6 +1110,9 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: 15px; }
 
+  .link-wth-arrow {
+    font-size: 12px; }
+
   .results__block-grid--btns {
     justify-content: start; }
   .results__block-grid--adverts {
@@ -1142,7 +1128,37 @@ button {
     display: inline-block; }
   .results__block-grid--userpic-p {
     display: flex;
-    top: 133px; } }
+    top: 133px; }
+
+  .clubMaster__block-content--items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 40px; }
+  .clubMaster__block-content--item-title {
+    font-size: 30px;
+    line-height: 40px; }
+  .clubMaster__block-content--item-text {
+    text-align: center; }
+  .clubMaster__block-items {
+    grid-template-columns: repeat(2, 1fr); }
+  .clubMaster__block-item--circle::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(157, 145, 145, 0.15); }
+  .clubMaster__block-item--circle::after {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #FF48F7; }
+  .clubMaster__block-btns {
+    flex-direction: row;
+    margin-bottom: 40px; } }
 @media (min-width: 600px) {
   .main__text {
     margin-bottom: 0; }
@@ -1251,8 +1267,10 @@ button {
   .workout__block-item--title {
     margin-left: 120px; }
 
-  .link-wth-arrow::after {
-    top: 0; }
+  .link-wth-arrow {
+    font-size: 18px; }
+    .link-wth-arrow::after {
+      top: 0; }
 
   .results__block-trainer::before {
     width: 60px;
@@ -1269,7 +1287,17 @@ button {
     padding: 15px; }
   .results__block-grid--userpic-p {
     top: 122px;
-    left: 179px; } }
+    left: 179px; }
+
+  .circle {
+    width: 90px;
+    height: 90px; }
+    .circle__item {
+      font-size: 40px;
+      line-height: 48px; }
+
+  .clubMaster__block-item--title {
+    max-width: calc(100% - 90px - 2em); } }
 @media (min-width: 992px) {
   .wrapper {
     background-size: 50%; }
@@ -1350,7 +1378,7 @@ button {
   .block__slogan-title {
     font-size: 150px;
     font-weight: 800;
-    line-height: 113px;
+    line-height: 200px;
     letter-spacing: 0.130em; }
   .block__slogan-result {
     margin: 58px 0 13px 2px; }
@@ -1358,7 +1386,11 @@ button {
   .results__block-info {
     max-width: 721px; }
   .results__block-slogan {
-    display: block; } }
+    display: block; }
+
+  .clubMaster__block-content--item-title {
+    font-size: 48px;
+    line-height: 58px; } }
 @media (min-width: 1200px) {
   .main__button {
     font-size: 12px;
@@ -1396,13 +1428,24 @@ button {
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
-    padding-left: 115px; } }
+    padding-left: 115px; }
+
+  .clubMaster__block {
+    flex-direction: row; }
+  .clubMaster__block-items {
+    margin-right: 2em;
+    gap: 1.5em; } }
 @media (min-width: 1270px) {
   .main__slogan {
     top: -145px; }
 
   .workout__block {
-    margin-top: 240px; } }
+    margin-top: 240px; }
+
+  .clubMaster__block-items {
+    margin-right: 3em; }
+  .clubMaster__link-wth-arrow::after {
+    top: 3px; } }
 @media (min-width: 1430px) {
   h3 {
     font-size: 96px;
@@ -1481,7 +1524,12 @@ button {
     padding: 30px; }
   .results__block-grid--userpic-p {
     top: 133px;
-    left: 190px; } }
+    left: 190px; }
+
+  .clubMaster__block-btns {
+    align-items: center; }
+  .clubMaster__block-btn {
+    margin-bottom: 0px; } }
 @media (min-width: 1740px) {
   .workout__block-item {
     padding: 51px 38px 30px 30px; }
