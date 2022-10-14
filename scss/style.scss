@@ -464,9 +464,9 @@
         color: $span;
         margin-bottom: 16px;
     }
-    &__block-grid--userpics-text{
-        margin-bottom: 30px;
-    }
+    // &__block-grid--userpics-text{
+    //     margin-bottom: 30px;
+    // }
     &__block-grid--userpic-img{
         margin-right: -13px;
     }
@@ -600,7 +600,7 @@
         // gap: 50px;        
     }
     &__block-item{
-        padding: 46px 30px 30px 30px;        
+        // padding: 46px 30px 30px 30px;        
         border-radius: 20px;
         position: relative;
         // &::before{
@@ -725,81 +725,83 @@
     width: 50px;
 }
 .client{
-    &__block{
-        position: relative;
-        &::before{
-            content: url(../img/triangle-slider.png);
-            position: absolute;
-            background-repeat: no-repeat;
-            top: 45px;
-            left: -200px;
-        }
-    }
-    &__content-box{
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    &__slider{        
-        position: relative;
-        overflow: hidden;
-    }
-    &__content-box-text{
-        margin: 20px 550px 102px;
-    }
-    &__slides{
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-    }
-    &__slide-box{
-        display: flex;
-        min-width: 100%;
-        position: relative;
-    }
-    &__slide-img{
-        position: absolute;
-        background-color: $colorText;
-        top: 1px;
-        left: 2px;
-        width: 416px;
-        height: 375px;
-        clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-        -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-        -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    }
-    &__slide-inner{
-        border: 1px solid $span;
-        border-left: 0;
-        width: 841px;
-        position: relative;
-        left: -106px;
-        padding: 74px 58px 37px 117px;
-    }
-    &___slide-info{
-        margin-bottom: 30px;
-    }
-    &__slide-text{
-        @include fonts(24px, 500, 38px);
-        position: relative;
-        &::before{
-            content: url(../img/quotes.png);
-            position: absolute;
-            top: -30px;
-        }
-    }
-    &__slide-user-items{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 40px;
-    }
-    &__slider-control {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 150px;
-        margin-top: 72px;
-    }
+    
+     &__block{
+        display: none;
+    //     position: relative;
+    //     &::before{
+    //         content: url(../img/triangle-slider.png);
+    //         position: absolute;
+    //         background-repeat: no-repeat;
+    //         top: 45px;
+    //         left: -200px;
+    //     }
+    // }
+    // &__content-box{
+    //     text-align: center;
+    //     margin-bottom: 20px;
+    // }
+    // &__slider{        
+    //     position: relative;
+    //     overflow: hidden;
+    // }
+    // &__content-box-text{
+    //     margin: 20px 550px 102px;
+    // }
+    // &__slides{
+    //     display: flex;
+    //     flex-direction: row;
+    //     height: 100%;
+    // }
+    // &__slide-box{
+    //     display: flex;
+    //     min-width: 100%;
+    //     position: relative;
+    // }
+    // &__slide-img{
+    //     position: absolute;
+    //     background-color: $colorText;
+    //     top: 1px;
+    //     left: 2px;
+    //     width: 416px;
+    //     height: 375px;
+    //     clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    //     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    //     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    // }
+    // &__slide-inner{
+    //     border: 1px solid $span;
+    //     border-left: 0;
+    //     width: 841px;
+    //     position: relative;
+    //     left: -106px;
+    //     padding: 74px 58px 37px 117px;
+    // }
+    // &___slide-info{
+    //     margin-bottom: 30px;
+    // }
+    // &__slide-text{
+    //     @include fonts(24px, 500, 38px);
+    //     position: relative;
+    //     &::before{
+    //         content: url(../img/quotes.png);
+    //         position: absolute;
+    //         top: -30px;
+    //     }
+    // }
+    // &__slide-user-items{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     margin: 0 40px;
+    // }
+    // &__slider-control {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     gap: 150px;
+    //     margin-top: 72px;
+     }
 }
 
 .hexagon-box{
@@ -1172,7 +1174,8 @@
         font-size: 15px;
         // line-height: 25px;        
         &::after {
-            top: -3px;
+            //top: -3px;
+            top: calc(100% - 21px);
         }
     }
     .results {
@@ -1314,6 +1317,9 @@
     }
     .link-wth-arrow {
         font-size: 12px;
+        &::after {
+            top: calc(100% - 20px);
+        }
     }
     .results {
         &__block-grid--btns {
@@ -1390,7 +1396,17 @@
             flex-direction: row;
             margin-bottom: 40px;
         }
-        
+        &__link-wth-arrow::after {
+            top: 3px;
+        }
+    }
+    .client {
+        &__block {
+            display: block;
+        }
+    }
+    .hexagon-box {
+        display: none;
     }
 }
 
@@ -1520,7 +1536,8 @@
     .link-wth-arrow {
         font-size: 18px;
         &::after {
-                top: 0;
+                //top: 0;
+                top: calc(100% - 23px);
             }
     }
     .results {
@@ -1562,7 +1579,9 @@
         &__block-item--title {
             max-width: calc(100% - 90px - 2em);
         }
-        
+        &__link-wth-arrow::after {
+            top: 4px;
+        }
     }
 }
 
@@ -1887,11 +1906,38 @@
        }
     } 
     .clubMaster {
+        &__block-item {
+            padding: 30px;
+        }
+        &__block-item--title {
+            text-align: center;
+            max-width: 100%;
+            margin-left: 0;
+        }
         &__block-btns {
             align-items: center;
         }
         &__block-btn {
             margin-bottom: 0px;
+        }
+    }
+    .circle-wrap {
+        display: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    .circle-wrap {
+        display: inline-block;
+    }
+    .clubMaster {
+        &__block-item {
+            padding: 1em;
+        }
+        &__block-item--title {
+            max-width: calc(100% - 90px - 2em);
+            margin-left: 20px;
+            text-align: left;
         }
     }
 }
@@ -1968,8 +2014,21 @@
             grid-template: 58px 122px/568px 342px;
             gap: 80px;
         }
+        &__block-grid--userpics-text {
+            margin-bottom: 30px;
+        }
+        &__block-grid--userpic-p {
+            top: 152px;
+        }
     }
-    
+    .clubMaster {
+        &__block-items {
+            margin-right: 6em;
+        }
+        &__block-item {
+            padding: 1.8em;
+        }
+    }
 }
 @media (min-width: 1780px) {
     .main {
