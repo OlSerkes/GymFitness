@@ -591,7 +591,7 @@
 .clubMaster{
     &__block{
         display: flex;
-        margin-bottom: 220px;
+        // margin-bottom: 220px;
     }
     &__block-items{
         display: grid;
@@ -728,7 +728,7 @@
     
      &__block{
         display: none;
-    //     position: relative;
+        // position: relative;
     //     &::before{
     //         content: url(../img/triangle-slider.png);
     //         position: absolute;
@@ -736,28 +736,28 @@
     //         top: 45px;
     //         left: -200px;
     //     }
-    // }
-    // &__content-box{
-    //     text-align: center;
-    //     margin-bottom: 20px;
-    // }
-    // &__slider{        
-    //     position: relative;
-    //     overflow: hidden;
-    // }
+    }
+     &__content-box{
+        // text-align: center;
+         margin-bottom: 20px;
+     }
+    &__slider{        
+        position: relative;
+        overflow: hidden;
+    }
     // &__content-box-text{
     //     margin: 20px 550px 102px;
     // }
-    // &__slides{
-    //     display: flex;
-    //     flex-direction: row;
-    //     height: 100%;
-    // }
-    // &__slide-box{
-    //     display: flex;
-    //     min-width: 100%;
-    //     position: relative;
-    // }
+    &__slides{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+    &__slide-box{
+        display: flex;
+        min-width: 100%;
+        position: relative;
+    }
     // &__slide-img{
     //     position: absolute;
     //     background-color: $colorText;
@@ -769,64 +769,67 @@
     //     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     //     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     // }
-    // &__slide-inner{
-    //     border: 1px solid $span;
-    //     border-left: 0;
-    //     width: 841px;
-    //     position: relative;
-    //     left: -106px;
-    //     padding: 74px 58px 37px 117px;
-    // }
+    &__slide-inner{
+        border: 1px solid $span;
+        //border-left: 0;
+        //width: 841px;
+        position: relative;
+        //left: -106px;
+        //padding: 74px 58px 37px 117px;
+    }
     // &___slide-info{
     //     margin-bottom: 30px;
     // }
-    // &__slide-text{
-    //     @include fonts(24px, 500, 38px);
-    //     position: relative;
-    //     &::before{
-    //         content: url(../img/quotes.png);
-    //         position: absolute;
-    //         top: -30px;
-    //     }
-    // }
+    &__slide-text{
+        //@include fonts(24px, 500, 38px);
+        position: relative;
+        &::before{
+            content: url(../img/quotes.png);
+            position: absolute;
+            //top: -30px;
+        }
+    }
     // &__slide-user-items{
     //     display: flex;
     //     justify-content: space-between;
     //     align-items: center;
     //     margin: 0 40px;
     // }
-    // &__slider-control {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     gap: 150px;
-    //     margin-top: 72px;
-     }
+    &__slider-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // gap: 150px;
+        // margin-top: 72px;
+    }
 }
 
-.hexagon-box{
-    display: block;
-    position: relative;
-    width: 420px;
-    height: 377.72px;
-    background: $span;
-    box-sizing: border-box;
-    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-             
-    img{
-        position: absolute;
-        background-color: $colorText;
-        top: 12px;
-        left: 18px;
-        width: 380px;
-        height: 349px;
-        clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-        -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-        -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    }     
+.hexagon-box {
+    display: none;
 }
+// .hexagon-box{
+//     display: block;
+//     position: relative;
+//     width: 420px;
+//     height: 377.72px;
+//     background: $span;
+//     box-sizing: border-box;
+//     clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+//     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+//     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+             
+//     img{
+//         position: absolute;
+//         background-color: $colorText;
+//         top: 12px;
+//         left: 18px;
+//         width: 380px;
+//         height: 349px;
+//         clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+//         -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+//         -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+//     }     
+// }
 
 .blog{
     &__block{
@@ -1242,7 +1245,8 @@
     }
     .clubMaster {
         &__block {
-            flex-direction: column-reverse;            
+            flex-direction: column-reverse; 
+            margin: 3em 0;           
         }
         &__block-items {
             grid-template-columns: 1fr;
@@ -1403,11 +1407,31 @@
     .client {
         &__block {
             display: block;
+            position: relative;
+        }
+        &__content-box-text {
+            margin-top: 20px;
+        }
+        // &__slide-box {
+        //     left: 191px;
+        // }
+        &__slide-inner {
+            padding: 1.5em;
+            
+        }
+    &__slide-text {
+        @include fonts(12px, 500, 22px);
+        &::before {
+        top: -1em;
+        left: -3em;
         }
     }
-    .hexagon-box {
-        display: none;
+    &__slider-control {
+        gap: 3em;
+        margin-top: 30px;
     }
+}
+    
 }
 
 @media (min-width: 600px) {
@@ -1583,6 +1607,53 @@
             top: 4px;
         }
     }
+    .client {
+        &__slide-inner {
+            border-left: 0;
+            width: 575px;
+            left: -64px;
+            padding: 0.5em 0.5em 0.5em 2.5em;
+            }
+        &__slide-img{
+                position: absolute;
+                background-color: $colorText;
+                top: 2px;
+                left: 2px;
+                width: 235px;
+                height: 216px;
+                clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+                -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+                -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+        }
+        &__slide-user-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+        .hexagon-box {
+            display: block;
+            position: relative;
+            width: 366px;
+            height: 218.74px;
+            background: $span;
+            box-sizing: border-box;
+            clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    
+            img {
+                position: absolute;
+                background-color: $colorText;
+                top: 12px;
+                left: 18px;
+                width: 198px;
+                height: 191px;
+                clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+                -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+                -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            }
+        }
 }
 
 @media (min-width: 992px) { 

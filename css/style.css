@@ -538,8 +538,7 @@ button {
     display: none; }
 
 .clubMaster__block {
-  display: flex;
-  margin-bottom: 220px; }
+  display: flex; }
 .clubMaster__block-items {
   display: grid; }
 .clubMaster__block-item {
@@ -615,27 +614,34 @@ button {
 
 .client__block {
   display: none; }
+.client__content-box {
+  margin-bottom: 20px; }
+.client__slider {
+  position: relative;
+  overflow: hidden; }
+.client__slides {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+.client__slide-box {
+  display: flex;
+  min-width: 100%;
+  position: relative; }
+.client__slide-inner {
+  border: 1px solid #FF48F7;
+  position: relative; }
+.client__slide-text {
+  position: relative; }
+  .client__slide-text::before {
+    content: url(../img/quotes.png);
+    position: absolute; }
+.client__slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .hexagon-box {
-  display: block;
-  position: relative;
-  width: 420px;
-  height: 377.72px;
-  background: #FF48F7;
-  box-sizing: border-box;
-  clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-  -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
-  .hexagon-box img {
-    position: absolute;
-    background-color: #FFFFFF;
-    top: 12px;
-    left: 18px;
-    width: 380px;
-    height: 349px;
-    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
+  display: none; }
 
 .blog__block {
   margin-bottom: 340px; }
@@ -1000,7 +1006,8 @@ button {
     display: none; }
 
   .clubMaster__block {
-    flex-direction: column-reverse; }
+    flex-direction: column-reverse;
+    margin: 3em 0; }
   .clubMaster__block-items {
     grid-template-columns: 1fr;
     gap: 5px; }
@@ -1101,10 +1108,22 @@ button {
     top: 3px; }
 
   .client__block {
-    display: block; }
-
-  .hexagon-box {
-    display: none; } }
+    display: block;
+    position: relative; }
+  .client__content-box-text {
+    margin-top: 20px; }
+  .client__slide-inner {
+    padding: 1.5em; }
+  .client__slide-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px; }
+    .client__slide-text::before {
+      top: -1em;
+      left: -3em; }
+  .client__slider-control {
+    gap: 3em;
+    margin-top: 30px; } }
 @media (min-width: 600px) {
   .main__text {
     margin-bottom: 0; }
@@ -1245,7 +1264,48 @@ button {
   .clubMaster__block-item--title {
     max-width: calc(100% - 90px - 2em); }
   .clubMaster__link-wth-arrow::after {
-    top: 4px; } }
+    top: 4px; }
+
+  .client__slide-inner {
+    border-left: 0;
+    width: 575px;
+    left: -64px;
+    padding: 0.5em 0.5em 0.5em 2.5em; }
+  .client__slide-img {
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 2px;
+    left: 2px;
+    width: 235px;
+    height: 216px;
+    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
+  .client__slide-user-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+  .hexagon-box {
+    display: block;
+    position: relative;
+    width: 366px;
+    height: 218.74px;
+    background: #FF48F7;
+    box-sizing: border-box;
+    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
+    .hexagon-box img {
+      position: absolute;
+      background-color: #FFFFFF;
+      top: 12px;
+      left: 18px;
+      width: 198px;
+      height: 191px;
+      clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); } }
 @media (min-width: 992px) {
   .wrapper {
     background-size: 50%; }
