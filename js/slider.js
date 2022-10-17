@@ -18,6 +18,7 @@ slide.append(firstClone);
 slide.prepend(lastClone);
 
 const slideWidth = slides[index].clientWidth;
+console.log(slideWidth);
 
 slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
