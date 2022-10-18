@@ -1736,6 +1736,26 @@
                 -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
             }
         }
+    .blog {
+        &__block-wrapper {
+            align-items: start;
+            flex-direction: row;
+        }
+        &__block-articles {
+            margin-right: 20px;
+            flex-shrink: 2;
+        }
+        &__block-accordion {
+            margin-top: 0;
+            flex-shrink: 3;
+        }
+    }
+    .accordion {
+        &-title {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
 }
 
 @media (min-width: 992px) { 

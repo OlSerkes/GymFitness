@@ -1338,7 +1338,21 @@ button {
       height: 10.61em;
       clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
       -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); } }
+      -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%); }
+
+  .blog__block-wrapper {
+    align-items: start;
+    flex-direction: row; }
+  .blog__block-articles {
+    margin-right: 20px;
+    flex-shrink: 2; }
+  .blog__block-accordion {
+    margin-top: 0;
+    flex-shrink: 3; }
+
+  .accordion-title {
+    font-size: 15px;
+    line-height: 25px; } }
 @media (min-width: 992px) {
   .wrapper {
     background-size: 50%; }
