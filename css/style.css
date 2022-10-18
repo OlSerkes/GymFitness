@@ -1718,4 +1718,20 @@ button {
     height: 1092px;
     left: -308px;
     top: -260px;
-    transform: none; } }
+    transform: none; }
+
+  .client__block::before {
+    top: 45px; }
+  .client__content-box {
+    margin-bottom: 20px; }
+  .client__content-box-text {
+    margin: 20px 550px 102px; }
+  .client__slide-inner {
+    width: 49em; }
+  .client___slide-info {
+    margin-bottom: 30px; }
+  .client__slide-text::before {
+    top: -30px; }
+  .client__slider-control {
+    gap: 150px;
+    margin-top: 72px; } }

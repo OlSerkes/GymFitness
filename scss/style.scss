@@ -746,9 +746,7 @@
         position: relative;
         overflow: hidden;
     }
-    // &__content-box-text{
-    //     margin: 20px 550px 102px;
-    // }
+    
     &__slides{
         display: flex;
         flex-direction: row;
@@ -2270,6 +2268,34 @@
             }
         }
     }
+    .client {
+        &__block {
+            &::before {
+                top: 45px;
+            }
+        }
+        &__content-box {
+            margin-bottom: 20px;
+        }
+        &__content-box-text {            
+            margin: 20px 550px 102px;
+        }
+        &__slide-inner {                     
+            width: 49em;
+        }        
+        &___slide-info{
+            margin-bottom: 30px;
+        }
+        &__slide-text {                      
+            &::before {
+              top: -30px;
+            }
+        }
+        &__slider-control {
+            gap: 150px;
+            margin-top: 72px;
+        }
+    }    
 }
 
 
