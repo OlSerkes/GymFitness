@@ -756,7 +756,7 @@
         display: flex;
         //min-width: 100%;
 
-        min-width: 669px;
+        min-width: 380px;
         position: relative;
     }
     // &__slide-img{
@@ -1305,13 +1305,13 @@
     }
     .blog {
         &__block-title {
-            margin-bottom: 60px;
+            margin: 60px 0;
             text-align: left;
         }
         &__block-article {
             width: auto;
             height: auto;
-            top: 78px;
+            top: 75%;
             left: 15px;
             right: 15px;
             padding: 1em;
@@ -1526,6 +1526,18 @@
         }
         &__block-grid--adv {
             margin-right: 30px;
+        }
+    }
+    .blog {
+        &__block-text {
+            font-size: 18px;
+            line-height: 29px;
+        }
+    }
+    .accordion {
+        &-title {
+            font-size: 18px;
+            line-height: 29px;
         }
     }
 }
