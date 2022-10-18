@@ -646,30 +646,26 @@ button {
 .blog__block {
   margin-bottom: 340px; }
 .blog__block-title {
-  margin-top: 225px;
-  margin-bottom: 100px;
-  text-align: center; }
+  margin-bottom: 100px; }
 .blog__block-wrapper {
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  align-items: center; }
 .blog__block-articles {
-  position: relative;
-  margin-right: 116px; }
+  position: relative; }
 .blog__block-images {
   max-width: 846px; }
 .blog__block-img {
-  border-radius: 20px; }
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 .blog__block-article {
   background: linear-gradient(175.56deg, #e2baa8 0%, rgba(248, 249, 251, 0.3) 100%);
   box-shadow: 0px 50px 100px rgba(154, 144, 154, 0.1);
   backdrop-filter: blur(50px);
   border-radius: 20px;
-  padding: 30px;
-  position: absolute;
-  width: 560px;
-  height: 258px;
-  top: 339px;
-  left: 113px; }
+  position: absolute; }
 .blog__block-header {
   display: flex;
   justify-content: space-between;
@@ -678,16 +674,16 @@ button {
   color: #191718;
   box-sizing: border-box;
   border: 1px solid #FFFFFF;
-  width: 99px;
+  width: 55px;
   height: 58px;
   border-radius: 45px;
   background-color: #FFD6FD;
   text-transform: uppercase;
   box-shadow: 2px 12px 13px -2px transparent;
   transition: all 0.5s;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 40px; }
+  line-height: 30px; }
   .blog__block-button:hover {
     background-color: #FFFFFF;
     color: #FF48F7; }
@@ -696,11 +692,6 @@ button {
     opacity: 0.4; }
 .blog__block-author {
   opacity: 0.5; }
-.blog__block-text {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 35px;
-  padding: 30px 0; }
 
 .accordion {
   display: flex;
@@ -711,26 +702,27 @@ button {
   background: transparent;
   width: 100%; }
   .accordion-title {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 35px;
-    padding: 30px 0;
     text-align: left;
     max-width: 478px; }
   .accordion-btn {
     cursor: pointer;
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: #FFD1FD; }
     .accordion-btn::after {
-      content: url(../img/arrow-up-right-accord.png);
+      content: "";
+      background-image: url(../img/arrow-up-right-accord.png);
       position: absolute;
       background-repeat: no-repeat;
-      top: 50%;
-      left: 25%;
-      transform: translateY(-50%); }
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
     .accordion-btn:hover {
       background: #FF48F7; }
       .accordion-btn:hover::after {
@@ -1022,7 +1014,40 @@ button {
   .clubMaster__link-wth-arrow::after {
     top: 3px; }
   .clubMaster__block-content--items {
-    display: none; } }
+    display: none; }
+
+  .blog__block-title {
+    margin-bottom: 60px;
+    text-align: left; }
+  .blog__block-article {
+    width: auto;
+    height: auto;
+    top: 78px;
+    left: 15px;
+    right: 15px;
+    padding: 1em; }
+  .blog__block-header {
+    margin-bottom: 10px; }
+  .blog__block-button {
+    height: 30px; }
+  .blog__block-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 0.1em 0; }
+  .blog__link-wth-arrow {
+    font-size: 10px; }
+    .blog__link-wth-arrow::after {
+      top: calc(100% - 18px); }
+  .blog__block-accordion {
+    margin-top: 115px; }
+
+  .accordion-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    padding: 17px 0;
+    width: fit-content; } }
 @media (min-width: 480px) {
   .wrapper {
     background-position: top left;
