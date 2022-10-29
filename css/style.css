@@ -726,12 +726,7 @@ button {
     .accordion-btn:hover {
       background: #FF48F7; }
       .accordion-btn:hover::after {
-        content: url(../img/arrow-up-right-accord-active.png); }
-
-.accordion.active .accordion-btn {
-  background: #FF48F7; }
-  .accordion.active .accordion-btn::after {
-    content: url(../img/arrow-up-right-accord-active.png); }
+        background-image: url(../img/arrow-up-right-accord-active.png); }
 
 .panel {
   padding: 0 18px;
@@ -1445,7 +1440,15 @@ button {
 
   .clubMaster__block-content--item-title {
     font-size: 48px;
-    line-height: 58px; } }
+    line-height: 58px; }
+
+  .blog__block-articles {
+    flex-shrink: 1; }
+  .blog__block-accordion {
+    flex-shrink: 2; }
+  .blog__block-button {
+    width: 99px;
+    font-size: 12px; } }
 @media (min-width: 1200px) {
   .main__button {
     font-size: 12px;
@@ -1504,7 +1507,21 @@ button {
       top: -2.5em;
       left: -200px; }
   .client__content-box {
-    text-align: center; } }
+    text-align: center; }
+
+  .blog__block-title {
+    text-align: center; }
+  .blog__block-articles {
+    margin-right: 60px; }
+  .blog__block-article {
+    left: 70px;
+    right: 70px; }
+  .blog__block-accordion {
+    flex-shrink: 3; }
+
+  .accordion-title {
+    font-size: 24px;
+    line-height: 35px; } }
 @media (min-width: 1270px) {
   .main__slogan {
     top: -145px; }
@@ -1518,7 +1535,14 @@ button {
     top: 3px; }
 
   .client__block::before {
-    top: -3em; } }
+    top: -3em; }
+
+  .blog__block-article {
+    padding: 2em; }
+
+  .accordion-btn {
+    width: 60px;
+    height: 60px; } }
 @media (min-width: 1430px) {
   h3 {
     font-size: 96px;
@@ -1666,7 +1690,10 @@ button {
     width: 39.94em; }
   .client__slide-user-items {
     flex-direction: column;
-    align-items: start; } }
+    align-items: start; }
+
+  .blog__block-articles {
+    margin-right: 116px; } }
 @media (min-width: 1740px) {
   .workout__block-item {
     padding: 51px 38px 30px 30px; }
@@ -1732,7 +1759,10 @@ button {
     padding: 3em 3.5em 2em 6.5em;
     width: 46em; }
   .client__slide-text::before {
-    left: 0; } }
+    left: 0; }
+
+  .blog__block-accordion {
+    flex-shrink: 5; } }
 @media (min-width: 1780px) {
   .main__slogan {
     top: -260px; }
