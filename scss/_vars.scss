@@ -31,32 +31,6 @@ $modalBg: #FFEAFE;
     line-height: $lineHeight;
 }
 
-// @mixin button-arrow($bg,
-//     $borderWidth,
-//     $borderColor,
-//     $width,
-//     $height,
-//     $borderRadius,
-//     $bgColor,
-//     $boxShadowColor) {
-//     background: $bg;
-//     background-repeat: no-repeat;
-//     box-sizing: border-box;
-//     border: $borderWidth solid $borderColor;
-//     width: $width;
-//     height: $height;
-//     border-radius: $borderRadius;
-//     background-color: $bgColor;
-//     background-position: center;
-//     cursor: url(../img/icons/cursor-btn-arrow.png), pointer;
-
-//     &:hover {
-//         transform: scaleY(-1);
-//         box-shadow: 0 3px 10px 0 $boxShadowColor;
-//         transition: all 0.3s ease;
-//     }
-// }
-
 @mixin button($textColor,
     $borderColor,
     $width,
